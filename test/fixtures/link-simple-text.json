@@ -1,0 +1,24 @@
+{
+  "_type": "block",
+  "style": "normal",
+  "spans": [
+    {
+      "_type": "span",
+      "text": "String before link ",
+      "marks": []
+    },
+    {
+      "_type": "span",
+      "text": "actual link text",
+      "marks": [],
+      "link": {
+        "href": "http://icanhas.cheezburger.com/"
+      }
+    },
+    {
+      "_type": "span",
+      "text": " the rest",
+      "marks": []
+    }
+  ]
+}

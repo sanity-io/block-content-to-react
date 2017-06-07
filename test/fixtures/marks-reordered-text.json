@@ -1,0 +1,48 @@
+{
+  "_type": "block",
+  "style": "normal",
+  "spans": [
+    {
+      "_type": "span",
+      "text": "Plain",
+      "marks": []
+    },
+    {
+      "_type": "span",
+      "text": "strong",
+      "marks": [
+        "strong"
+      ]
+    },
+    {
+      "_type": "span",
+      "text": "strong and underline",
+      "marks": [
+        "underline",
+        "strong"
+      ]
+    },
+    {
+      "_type": "span",
+      "text": "strong and underline and emphasis",
+      "marks": [
+        "em",
+        "strong",
+        "underline"
+      ]
+    },
+    {
+      "_type": "span",
+      "text": "underline and emphasis",
+      "marks": [
+        "em",
+        "underline"
+      ]
+    },
+    {
+      "_type": "span",
+      "text": "plain again",
+      "marks": []
+    }
+  ]
+}

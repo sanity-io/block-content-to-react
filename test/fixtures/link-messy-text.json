@@ -1,0 +1,45 @@
+{
+  "_type": "block",
+  "style": "normal",
+  "spans": [
+    {
+      "_type": "span",
+      "text": "String with link to ",
+      "marks": []
+    },
+    {
+      "_type": "span",
+      "text": "internet ",
+      "marks": [],
+      "link": {
+        "href": "http://icanhas.cheezburger.com/"
+      }
+    },
+    {
+      "_type": "span",
+      "text": "is very strong and emphasis",
+      "marks": [
+        "strong",
+        "em"
+      ],
+      "link": {
+        "href": "http://icanhas.cheezburger.com/"
+      }
+    },
+    {
+      "_type": "span",
+      "text": " and just emphasis",
+      "marks": [
+        "em"
+      ],
+      "link": {
+        "href": "http://icanhas.cheezburger.com/"
+      }
+    },
+    {
+      "_type": "span",
+      "text": ".",
+      "marks": []
+    }
+  ]
+}

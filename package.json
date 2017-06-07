@@ -1,0 +1,51 @@
+{
+  "name": "@sanity/block-content-to-react",
+  "description": "React component for transforming Sanity block content to React components",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "umd": "umd/index.min.js",
+  "scripts": {
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContentAdapter",
+    "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
+    "watch": "npm run compile -- --watch",
+    "clean": "rimraf lib coverage .nyc_output umd/*.js",
+    "compile": "babel --source-maps --copy-files -d lib/ src/",
+    "coverage": "DEBUG=sanity NODE_ENV=test nyc --reporter=html --reporter=lcov --reporter=text npm test",
+    "minify": "uglifyjs -c -m -- umd/index.js > umd/index.min.js",
+    "postpublish": "npm run clean",
+    "posttest": "eslint .",
+    "prepublish": "in-publish && npm run build || not-in-publish",
+    "test": "tap test/*.test.js"
+  },
+  "keywords": [],
+  "author": "Sanity <hello@sanity.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@sanity/block-content-to-tree": "^0.1.2",
+    "in-publish": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "browserify": "^14.4.0",
+    "envify": "^4.0.0",
+    "eslint": "^3.13.1",
+    "eslint-config-sanity": "^2.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "nyc": "^11.0.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "rimraf": "^2.5.4",
+    "tap": "^10.3.3",
+    "uglify-js": "^3.0.15",
+    "uglifyify": "^3.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanity-io/block-content-to-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanity-io/block-content-to-react/issues"
+  },
+  "homepage": "https://github.com/sanity-io/block-content-to-react#readme"
+}

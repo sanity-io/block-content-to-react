@@ -1,0 +1,50 @@
+[
+  {
+    "_type": "block",
+    "listItem": "bullet",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "I am the most",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "_type": "block",
+    "listItem": "bullet",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "expressive",
+        "marks": []
+      },
+      {
+        "_type": "span",
+        "text": "programmer",
+        "marks": [
+          "strong"
+        ]
+      },
+      {
+        "_type": "span",
+        "text": "you know.",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "_type": "block",
+    "listItem": "bullet",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "SAD!",
+        "marks": []
+      }
+    ]
+  }
+]

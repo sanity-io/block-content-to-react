@@ -1,0 +1,11 @@
+{
+  "_type": "block",
+  "style": "normal",
+  "spans": [
+    {
+      "_type": "span",
+      "text": "Normal string of text.\nAnother line",
+      "marks": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "_type": "block",
+    "listItem": "bullet",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "A single bulleted item",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "_type": "block",
+    "listItem": "number",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "First numbered",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "_type": "block",
+    "listItem": "number",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "Second numbered",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "_type": "block",
+    "listItem": "bullet",
+    "style": "normal",
+    "spans": [
+      {
+        "_type": "span",
+        "text": "A bullet with",
+        "marks": []
+      },
+      {
+        "_type": "span",
+        "text": "something strong",
+        "marks": [
+          "strong"
+        ]
+      }
+    ]
+  }
+]
