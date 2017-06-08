@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "umd": "umd/index.min.js",
   "scripts": {
-    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContentAdapter",
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContentAdapter --no-bundle-external",
     "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output umd/*.js",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-eslint": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
     "browserify": "^14.4.0",
     "envify": "^4.0.0",
     "eslint": "^3.13.1",
