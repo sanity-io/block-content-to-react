@@ -6,6 +6,10 @@ const builtInHandlers = require('./typeHandlers')
 const h = React.createElement
 const blockContentToTree = new BlockContentToTree()
 
+function getKey(node, fallback) {
+  return (node && node.attributes && node.attributes._key) || fallback
+}
+
 function applyTreeProps(nodes, prevKey = -1, depth = 0, parent = null) {
   let currentKey = prevKey
 
@@ -18,7 +22,7 @@ function applyTreeProps(nodes, prevKey = -1, depth = 0, parent = null) {
       return node
     }
 
-    node.nodeKey = `${depth}-${++currentKey}`
+    node.nodeKey = getKey(node, `${depth}-${++currentKey}`)
     node.parent = parent
     node.content = node.content && applyTreeProps(node.content, currentKey, depth + 1, node)
     node.items = node.items && applyTreeProps(node.items, currentKey, depth + 1, node)
