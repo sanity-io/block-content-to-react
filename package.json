@@ -41,6 +41,9 @@
     "uglify-js": "^3.0.15",
     "uglifyify": "^3.0.4"
   },
+  "peerDependencies": {
+    "react": "^15.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sanity-io/block-content-to-react.git"

@@ -14,6 +14,10 @@ function applyTreeProps(nodes, prevKey = -1, depth = 0, parent = null) {
   }
 
   return nodes.map(node => {
+    if (typeof node === 'string') {
+      return node
+    }
+
     node.nodeKey = `${depth}-${++currentKey}`
     node.parent = parent
     node.content = node.content && applyTreeProps(node.content, currentKey, depth + 1, node)
