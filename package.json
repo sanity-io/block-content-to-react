@@ -1,7 +1,7 @@
 {
   "name": "@bengler/block-content-to-react",
   "description": "React component for transforming Sanity block content to React components",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "lib/index.js",
   "umd": "umd/index.min.js",
   "scripts": {
