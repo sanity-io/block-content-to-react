@@ -71,12 +71,13 @@ module.exports = function (blockTypeHandlers = {}, customBlockHandler) {
     },
 
     defaultBlock: node => {
-      if (blockHandlers[node.style]) {
+      const style = node.style || 'normal'
+      if (blockHandlers[style]) {
         node.children = getContent(node.content, typeHandlers)
-        return blockHandlers[node.style](node)
+        return blockHandlers[style](node)
       }
 
-      return h(node.style, {key: node.nodeKey}, getContent(node.content, typeHandlers))
+      return h(style, {key: node.nodeKey}, getContent(node.content, typeHandlers))
     },
 
     list: node => {
