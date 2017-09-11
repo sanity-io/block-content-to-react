@@ -1,5 +1,7 @@
-{
-  "_type": "author",
-  "name": "Test Person",
-  "description": "<script>alert('I am  haxor!');</script>"
-}
+[
+  {
+    "_type": "author",
+    "name": "Test Person",
+    "description": "<script>alert('I am  haxor!');</script>"
+  }
+]

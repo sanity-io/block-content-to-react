@@ -1,7 +1,8 @@
 {
   "env": {
     "node": true,
-    "browser": true
+    "browser": false,
+    "jest": true
   },
   "extends": ["sanity", "prettier"]
 }

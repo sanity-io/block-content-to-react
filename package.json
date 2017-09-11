@@ -10,36 +10,39 @@
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output umd/*.js",
     "compile": "babel --source-maps --copy-files -d lib/ src/",
-    "coverage": "DEBUG=sanity NODE_ENV=test nyc --reporter=html --reporter=lcov --reporter=text npm test",
+    "coverage": "npm test -- --coverage",
     "minify": "uglifyjs -c -m -- umd/index.js > umd/index.min.js",
     "postpublish": "npm run clean",
     "posttest": "eslint .",
     "prepublish": "in-publish && npm run build || not-in-publish",
-    "test": "tap test/*.test.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-tree": "^0.1.2",
-    "in-publish": "^2.0.0"
+    "@sanity/block-content-to-tree": "0.2.0-next",
+    "in-publish": "^2.0.0",
+    "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^7.1.1",
-    "babel-preset-env": "^1.5.2",
+    "babel-preset-env": "^1.6.0",
     "browserify": "^14.4.0",
-    "envify": "^4.0.0",
-    "eslint": "^3.13.1",
-    "eslint-config-sanity": "^2.0.1",
-    "eslint-plugin-import": "^2.2.0",
-    "nyc": "^11.0.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "rimraf": "^2.5.4",
-    "tap": "^10.3.3",
-    "uglify-js": "^3.0.15",
-    "uglifyify": "^3.0.4"
+    "envify": "^4.1.0",
+    "eslint": "^4.6.1",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-sanity": "^3.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^21.0.2",
+    "nyc": "^11.2.1",
+    "prettier": "^1.6.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.1.0",
+    "uglifyify": "^4.0.3"
   },
   "peerDependencies": {
     "react": "^15.0.0"

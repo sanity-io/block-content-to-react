@@ -1,4 +1,5 @@
 const React = require('react')
+const objectAssign = require('object-assign')
 const BlockContentToTree = require('@sanity/block-content-to-tree')
 const builtInHandlers = require('./typeHandlers')
 
@@ -24,8 +25,14 @@ function applyTreeProps(nodes, prevKey = -1, depth = 0, parent = null) {
 
     node.nodeKey = getKey(node, `${depth}-${++currentKey}`)
     node.parent = parent
-    node.content = node.content && applyTreeProps(node.content, currentKey, depth + 1, node)
-    node.items = node.items && applyTreeProps(node.items, currentKey, depth + 1, node)
+
+    node.children =
+      node.children &&
+      applyTreeProps(node.children, currentKey, depth + 1, node)
+
+    node.items =
+      node.items && applyTreeProps(node.items, currentKey, depth + 1, node)
+
     return node
   })
 }
@@ -38,7 +45,7 @@ const BlockContent = props => {
   const builtIn = builtInHandlers(props.blockTypeHandlers || {}, custom.block)
   delete custom.block // Is called from builtIn
 
-  const typeHandlers = Object.assign({}, builtIn, custom)
+  const typeHandlers = objectAssign({}, builtIn, custom)
 
   if (!Array.isArray(base)) {
     return parseSingle(base)
