@@ -5,12 +5,15 @@ const objectAssign = require('object-assign')
 // eslint-disable-next-line id-length
 const h = React.createElement
 
-function newlinify(text, parent) {
+function newlinify(text, parent, index) {
   return text
     .split('\n')
     .reduce(
       (target, chunk, i) =>
-        target.concat([chunk, h('br', {key: `${parent.nodeKey}+${i}`})]),
+        target.concat([
+          chunk,
+          h('br', {key: `${parent.nodeKey}+${index + i}`})
+        ]),
       []
     )
     .slice(0, -1)
@@ -20,7 +23,7 @@ function getChildren(children, typeHandlers, parent) {
   let nodes = []
   children.forEach((item, index) => {
     if (typeof item === 'string') {
-      nodes = nodes.concat(newlinify(item, parent))
+      nodes = nodes.concat(newlinify(item, parent, index))
     } else {
       const handler = typeHandlers[item.type] || typeHandlers.text
       nodes = nodes.concat(handler(item))
