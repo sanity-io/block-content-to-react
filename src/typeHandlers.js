@@ -5,22 +5,22 @@ const objectAssign = require('object-assign')
 // eslint-disable-next-line id-length
 const h = React.createElement
 
-function newlinify(text, node) {
+function newlinify(text, parent) {
   return text
     .split('\n')
     .reduce(
       (target, chunk, i) =>
-        target.concat([chunk, h('br', {key: `${node.nodeKey}+${i}`})]),
+        target.concat([chunk, h('br', {key: `${parent.nodeKey}+${i}`})]),
       []
     )
     .slice(0, -1)
 }
 
-function getChildren(children, typeHandlers) {
+function getChildren(children, typeHandlers, parent) {
   let nodes = []
   children.forEach((item, index) => {
     if (typeof item === 'string') {
-      nodes = nodes.concat(newlinify(item, item))
+      nodes = nodes.concat(newlinify(item, parent))
     } else {
       const handler = typeHandlers[item.type] || typeHandlers.text
       nodes = nodes.concat(handler(item))
@@ -37,7 +37,7 @@ function getListItems(items, listHandlers, typeHandlers) {
       nodes.push(item)
     } else {
       item.attributes = item.attributes || {}
-      item.children = getChildren(item.children, typeHandlers)
+      item.children = getChildren(item.children, typeHandlers, item)
       nodes.push(listHandlers.listItem(item))
     }
   })
@@ -81,14 +81,14 @@ module.exports = function(blockTypeHandlers = {}, customBlockHandler) {
     defaultBlock: node => {
       const style = node.style || 'normal'
       if (blockHandlers[style]) {
-        node.children = getChildren(node.children, typeHandlers)
+        node.children = getChildren(node.children, typeHandlers, node)
         return blockHandlers[style](node)
       }
 
       return h(
         style,
         {key: node.nodeKey},
-        getChildren(node.children, typeHandlers)
+        getChildren(node.children, typeHandlers, node)
       )
     },
 
@@ -112,7 +112,7 @@ module.exports = function(blockTypeHandlers = {}, customBlockHandler) {
         wrap = mark ? input => h(mark, {key: node.nodeKey}, input) : wrap
       }
 
-      node.children = getChildren(node.children, typeHandlers)
+      node.children = getChildren(node.children, typeHandlers, node)
 
       if (blockTypeHandlers.span) {
         return wrap(blockTypeHandlers.span(node))
