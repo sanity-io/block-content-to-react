@@ -49,21 +49,36 @@ function getListItems(items, listHandlers, typeHandlers) {
 }
 
 function mapMark(mark, marksMapping) {
-  if (marksMapping && typeof marksMapping[mark] !== 'undefined') {
-    return marksMapping[mark]
+  const markName = mark._type || mark
+  if (marksMapping && typeof marksMapping[markName] !== 'undefined') {
+    return marksMapping[markName]
   }
 
-  return mark
+  return markName
+}
+
+const defaultMarkHandlers = {
+  link: props => {
+    return h('a', {key: props.nodeKey, href: props.href}, props.children)
+  }
+}
+
+const defaultHandlers = {
+  normal: node => h('p', {key: node.nodeKey}, node.children)
 }
 
 module.exports = function(blockTypeHandlers = {}, customBlockHandler) {
-  const defaultHandlers = {
-    normal: node => h('p', {key: node.nodeKey}, node.children)
-  }
   const blockHandlers = objectAssign(
+    {},
     defaultHandlers,
     blockTypeHandlers.textBlock || {},
     blockTypeHandlers.customBlock || {}
+  )
+
+  blockHandlers.marks = objectAssign(
+    {},
+    defaultMarkHandlers,
+    blockTypeHandlers.marks
   )
 
   const listHandlers = objectAssign(
@@ -109,23 +124,19 @@ module.exports = function(blockTypeHandlers = {}, customBlockHandler) {
     },
 
     span: node => {
-      let wrap = input => input
-      if (typeof node.mark === 'string') {
-        const mark = mapMark(node.mark, blockTypeHandlers.marks)
-        wrap = mark ? input => h(mark, {key: node.nodeKey}, input) : wrap
+      let wrap = children => children
+      if (node.mark) {
+        const mark = mapMark(node.mark, blockHandlers.marks)
+        wrap = mark
+          ? children =>
+              h(mark, objectAssign({key: node.nodeKey}, node.mark), children)
+          : wrap
       }
 
       node.children = getChildren(node.children, typeHandlers, node)
 
       if (blockTypeHandlers.span) {
         return wrap(blockTypeHandlers.span(node))
-      }
-
-      if (node.mark && node.mark._type === 'link') {
-        // Deal with the default block editor setup 'link' attribute
-        return wrap(
-          h('a', {href: node.mark.href, key: node.nodeKey}, node.children)
-        )
       }
 
       return wrap(node.children)

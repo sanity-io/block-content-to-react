@@ -2,7 +2,7 @@
   "name": "@sanity/block-content-to-react",
   "description":
     "React component for transforming Sanity block content to React components",
-  "version": "0.2.3-next",
+  "version": "0.2.4",
   "main": "lib/index.js",
   "umd": "umd/index.min.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-tree": "0.2.0-next",
+    "@sanity/block-content-to-tree": "^0.3.0",
     "in-publish": "^2.0.0",
     "object-assign": "^4.1.1"
   },

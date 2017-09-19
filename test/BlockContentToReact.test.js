@@ -8,7 +8,11 @@ const h = React.createElement
 const render = props => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
 
 const blockTypeHandlers = {
-  marks: {em: null},
+  marks: {
+    em: null,
+    author: props => h('div', null, props.name),
+    link: props => h('a', {className: 'foo', href: props.href}, props.children)
+  },
   listBlock: {
     number: node =>
       h('ol', {key: node.nodeKey, className: 'foo'}, node.children),
@@ -28,23 +32,6 @@ const blockTypeHandlers = {
         {key: node.nodeKey, className: 'big-heading', id: node.extra},
         node.children
       )
-  },
-  span: node => {
-    if (node.mark && node.mark._type === 'author') {
-      return h('div', null, node.mark.name)
-    }
-
-    if (node.mark && node.mark._type === 'link') {
-      return h(
-        'a',
-        {key: node.nodeKey, className: 'foo', href: node.mark.href},
-        node.children
-      )
-    }
-
-    return node.children && node.children.length === 1
-      ? node.children[0]
-      : h('span', null, node.children)
   }
 }
 
@@ -59,7 +46,6 @@ const renderCustom = props => {
         return h(
           'div',
           {className: 'grid', key: node.nodeKey},
-          node.content,
           defaultBlock(node)
         )
       }
