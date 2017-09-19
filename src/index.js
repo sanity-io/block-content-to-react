@@ -33,6 +33,8 @@ function applyTreeProps(nodes, prevKey = -1, depth = 0, parent = null) {
     node.items =
       node.items && applyTreeProps(node.items, currentKey, depth + 1, node)
 
+    node.content = node.children
+
     return node
   })
 }
