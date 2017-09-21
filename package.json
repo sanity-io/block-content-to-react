@@ -2,10 +2,10 @@
   "name": "@sanity/block-content-to-react",
   "description": "React component for transforming Sanity block content to React components",
   "version": "0.3.0",
-  "main": "lib/index.js",
+  "main": "lib/BlockContent.js",
   "umd": "umd/index.min.js",
   "scripts": {
-    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContentAdapter --no-bundle-external",
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContent --no-bundle-external",
     "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output umd/*.js",
@@ -23,7 +23,8 @@
   "dependencies": {
     "@sanity/block-content-to-tree": "^0.3.0",
     "in-publish": "^2.0.0",
-    "object-assign": "^4.1.1"
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -37,7 +38,7 @@
     "eslint-plugin-import": "^2.7.0",
     "jest": "^21.0.2",
     "nyc": "^11.2.1",
-    "prettier": "^1.6.1",
+    "prettier": "^1.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "rimraf": "^2.6.2",
