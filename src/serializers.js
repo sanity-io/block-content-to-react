@@ -31,6 +31,17 @@ function SpanSerializer(props) {
   return h(serializer, props.node, children)
 }
 
+// Low-level list serializer
+function ListSerializer(props) {
+  const tag = props.type === 'bullet' ? 'ul' : 'ol'
+  return h(tag, null, props.children)
+}
+
+// Low-level list item serializer
+function ListItemSerializer(props) {
+  return h('li', null, props.children)
+}
+
 // Renderer of an actual block of type `block`. Confusing, we know.
 function BlockTypeSerializer(props) {
   const {style, children} = props
@@ -92,10 +103,8 @@ const defaultSerializers = {
   marks: defaultMarkSerializers,
 
   // Less common overrides
-  /*
   list: ListSerializer,
   listItem: ListItemSerializer,
-  */
 
   block: BlockSerializer,
   span: SpanSerializer

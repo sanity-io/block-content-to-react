@@ -54,3 +54,15 @@ test('builds correct structure from advanced, nested mark structure', () => {
   const result = render({blocks: input})
   expect(result).toEqual(output)
 })
+
+test('builds bullet lists in parent container', () => {
+  const {input, output} = require('./fixtures/010-basic-bullet-list')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('builds bullet lists in parent container', () => {
+  const {input, output} = require('./fixtures/011-basic-numbered-list')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
