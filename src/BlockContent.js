@@ -64,7 +64,6 @@ function BlockContent(props) {
     {nodes: [], listBlocks: []}
   )
 
-  // @todo Improve this - we could pass an array but get a list container back
   return nodes.length > 1 ? h('div', {className: props.className}, nodes) : nodes[0]
 }
 
