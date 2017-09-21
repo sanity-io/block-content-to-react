@@ -4,11 +4,20 @@ const objectAssign = require('object-assign')
 const buildMarksTree = require('./buildMarksTree')
 const {defaultSerializers, serializeSpan} = require('./serializers')
 
+// Properties to extract from props and pass to serializers as options
+const optionProps = ['projectId', 'dataset', 'imageOptions']
 const h = React.createElement
 
 function BlockContent(props) {
   const blocks = Array.isArray(props.blocks) ? props.blocks : [props.blocks]
   const serializers = getSerializers(props.serializers)
+  const options = optionProps.reduce((opts, key) => {
+    const value = props[key]
+    if (typeof value !== 'undefined') {
+      opts[key] = value
+    }
+    return opts
+  }, {})
 
   const serializeBlock = block => {
     const tree = buildMarksTree(block)
@@ -16,7 +25,8 @@ function BlockContent(props) {
     const blockProps = {
       key: block._key,
       node: block,
-      serializers
+      serializers,
+      options
     }
 
     return h(serializers.block, blockProps, children)
@@ -26,7 +36,7 @@ function BlockContent(props) {
     const key = block._key
     const tree = buildMarksTree(block)
     const children = tree.map(span => serializeSpan(span, serializers))
-    return h(serializers.listItem, {node: block, key}, children)
+    return h(serializers.listItem, {node: block, key, options}, children)
   }
 
   const serializeList = listBlocks => {
@@ -34,7 +44,7 @@ function BlockContent(props) {
     const type = first.listItem
     const key = first._key
     const children = listBlocks.map(serializeListItem)
-    return h(serializers.list, {key, type}, children)
+    return h(serializers.list, {key, type, options}, children)
   }
 
   const {nodes} = blocks.reduce(
@@ -89,6 +99,11 @@ BlockContent.defaultSerializers = defaultSerializers
 BlockContent.propTypes = {
   className: PropTypes.string,
 
+  // When rendering images, we need project id and dataset, unless images are materialized
+  projectId: PropTypes.string,
+  dataset: PropTypes.string,
+  imageOptions: PropTypes.object,
+
   serializers: PropTypes.shape({
     // Common overrides
     types: PropTypes.object,
@@ -116,7 +131,8 @@ BlockContent.propTypes = {
 }
 
 BlockContent.defaultProps = {
-  serializers: BlockContent.defaultSerializers
+  serializers: BlockContent.defaultSerializers,
+  imageOptions: {}
 }
 
 module.exports = BlockContent

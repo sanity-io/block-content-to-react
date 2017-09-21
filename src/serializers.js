@@ -1,5 +1,6 @@
 const React = require('react')
 const objectAssign = require('object-assign')
+const ImageSerializer = require('./ImageSerializer')
 
 const h = React.createElement
 
@@ -13,7 +14,7 @@ function BlockSerializer(props) {
     )
   }
 
-  return h(serializer, props.node, props.children)
+  return h(serializer, {node: props.node, options: props.options}, props.children)
 }
 
 // Low-level span serializer
@@ -44,13 +45,15 @@ function ListItemSerializer(props) {
 
 // Renderer of an actual block of type `block`. Confusing, we know.
 function BlockTypeSerializer(props) {
-  const {style, children} = props
+  const style = props.node.style
 
   if (/^h\d/.test(style || '')) {
-    return React.createElement(style, null, children)
+    return React.createElement(style, null, props.children)
   }
 
-  return style === 'blockquote' ? h('blockquote', null, children) : h('p', null, children)
+  return style === 'blockquote'
+    ? h('blockquote', null, props.children)
+    : h('p', null, props.children)
 }
 
 // Serializers for things that can be directly attributed to a tag without any props
@@ -99,7 +102,10 @@ const defaultMarkSerializers = {
 
 const defaultSerializers = {
   // Common overrides
-  types: {block: BlockTypeSerializer},
+  types: {
+    block: BlockTypeSerializer,
+    image: ImageSerializer
+  },
   marks: defaultMarkSerializers,
 
   // Less common overrides

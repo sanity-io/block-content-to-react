@@ -61,8 +61,20 @@ test('builds bullet lists in parent container', () => {
   expect(result).toEqual(output)
 })
 
-test('builds bullet lists in parent container', () => {
+test('builds numbered lists in parent container', () => {
   const {input, output} = require('./fixtures/011-basic-numbered-list')
   const result = render({blocks: input})
   expect(result).toEqual(output)
+})
+
+test('builds images with passed projectId/dataset', () => {
+  const {input, output} = require('./fixtures/012-image-support')
+  const result = render({blocks: input, projectId: '3do82whm', dataset: 'production'})
+  expect(result).toEqual(output)
+})
+
+test('builds images with passed query params', () => {
+  const {input} = require('./fixtures/013-materialized-image-support')
+  const result = render({blocks: input, imageOptions: {w: 320, h: 240}})
+  expect(result).toContain('5748x3832.jpg?w=320&amp;h=240')
 })

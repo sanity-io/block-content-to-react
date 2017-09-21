@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@sanity/block-content-to-tree": "^0.3.0",
+    "@sanity/generate-help-url": "^0.113.0",
     "in-publish": "^2.0.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.5.10"

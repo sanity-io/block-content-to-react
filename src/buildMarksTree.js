@@ -2,6 +2,10 @@ const defaultMarks = ['strong', 'em', 'code', 'underline', 'strike-through']
 
 const buildMarksTree = block => {
   const {children, markDefs} = block
+  if (!children || !children.length) {
+    return []
+  }
+
   const sortedMarks = children.map(sortMarksByOccurences)
   const rootNode = {children: []}
   let nodeStack = [rootNode]
