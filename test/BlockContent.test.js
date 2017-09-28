@@ -78,3 +78,43 @@ test('builds images with passed query params', () => {
   const result = render({blocks: input, imageOptions: {w: 320, h: 240}})
   expect(result).toContain('5748x3832.jpg?w=320&amp;h=240')
 })
+
+test('builds nested lists', () => {
+  const {input, output} = require('./fixtures/014-nested-lists')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('builds all basic marks as expected', () => {
+  const {input, output} = require('./fixtures/015-all-basic-marks')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('can specify custom serializer for custom block types', () => {
+  const {input, output} = require('./fixtures/050-custom-block-type')
+  const CodeRenderer = props => {
+    expect(props).toMatchObject({
+      children: [],
+      node: {_key: '9a15ea2ed8a2', _type: 'code', code: input[0].code, language: 'javascript'},
+      options: {imageOptions: {}}
+    })
+    return h('pre', {'data-language': props.node.language}, h('code', null, props.node.code))
+  }
+  const types = {code: CodeRenderer}
+  const result = render({blocks: input, serializers: {types}})
+  expect(result).toEqual(output)
+})
+
+test('can override default serializers', () => {
+  const {input, output} = require('./fixtures/051-override-defaults')
+  const ImageRenderer = props => h('img', {alt: 'Such image', src: BlockContent.getImageUrl(props)})
+  const types = {image: ImageRenderer}
+  const result = render({
+    blocks: input,
+    serializers: {types},
+    projectId: '3do82whm',
+    dataset: 'production'
+  })
+  expect(result).toEqual(output)
+})

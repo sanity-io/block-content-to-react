@@ -12,6 +12,11 @@ const buildMarksTree = block => {
 
   children.forEach((span, i) => {
     const marksNeeded = sortedMarks[i]
+    if (!marksNeeded) {
+      const lastNode = nodeStack[nodeStack.length - 1]
+      lastNode.children.push(span)
+      return
+    }
 
     let pos = 1
 

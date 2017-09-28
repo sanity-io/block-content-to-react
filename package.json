@@ -5,7 +5,8 @@
   "main": "lib/BlockContent.js",
   "umd": "umd/index.min.js",
   "scripts": {
-    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContent --no-bundle-external",
+    "browserify":
+      "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/index.js -o umd/index.js --standalone=BlockContent --no-bundle-external",
     "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output umd/*.js",
@@ -56,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/sanity-io/block-content-to-react/issues"
   },
-  "homepage": "https://github.com/sanity-io/block-content-to-react#readme"
+  "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.js"]
+  }
 }

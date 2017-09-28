@@ -9,13 +9,12 @@ module.exports = {
     }
   ],
   output: [
-    '<div>',
-    '<p>Let&#x27;s test some of these lists!</p>',
-    '<ol>',
-    '<li>Number 1</li>',
-    '<li>Number 2</li>',
-    '<li>Number 3</li>',
-    '</ol>',
-    '</div>'
+    '<pre data-language="javascript">',
+    '<code>',
+    'const foo = require(&#x27;foo&#x27;)\n\n',
+    'foo(&#x27;hi there&#x27;, (err, thing) =&gt; {\n',
+    '  console.log(err)\n',
+    '})\n',
+    '</code></pre>'
   ].join('')
 }

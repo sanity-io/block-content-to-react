@@ -1,6 +1,6 @@
 const React = require('react')
 const objectAssign = require('object-assign')
-const ImageSerializer = require('./ImageSerializer')
+const getImageUrl = require('./getImageUrl')
 
 const h = React.createElement
 
@@ -63,7 +63,7 @@ function RawMarkSerializer(tag, props) {
 }
 
 function UnderlineSerializer(props) {
-  return h('span', {style: 'text-decoration: underline;'}, props.children)
+  return h('span', {style: {textDecoration: 'underline'}}, props.children)
 }
 
 function StrikeThroughSerializer(props) {
@@ -72,6 +72,10 @@ function StrikeThroughSerializer(props) {
 
 function LinkSerializer(props) {
   return h('a', {href: props.mark.href}, props.children)
+}
+
+function ImageSerializer(props) {
+  return h('figure', null, h('img', {src: getImageUrl(props)}))
 }
 
 // Serializer that recursively calls itself, producing a React tree of spans

@@ -1,8 +1,6 @@
-const React = require('react')
 const generateHelpUrl = require('@sanity/generate-help-url')
 
 const enc = encodeURIComponent
-const h = React.createElement
 const materializeError = `You must either:
   - Pass \`projectId\` and \`dataset\` to the block renderer
   - Materialize images to include the \`url\` field.
@@ -49,6 +47,4 @@ const buildUrl = props => {
   return url
 }
 
-module.exports = function ImageSerializer(props) {
-  return h('figure', null, h('img', {src: buildUrl(props)}))
-}
+module.exports = buildUrl
