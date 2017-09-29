@@ -50,8 +50,8 @@ client.fetch('*[_type == "article"][0]').then(article => {
 
 In addition, in order to render images without materializing the asset documents, you should also specify:
 
-- `projectId` - To render images without materializing the asset documents, specify `projectId` and `dataset`.
-- `dataset` - To render images without materializing the asset documents, specify `projectId` and `dataset`.
+- `projectId` - The ID of your Sanity project.
+- `dataset` - Name of the Sanity dataset containing the document that is being rendered.
 
 ## Examples
 
