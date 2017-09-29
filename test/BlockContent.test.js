@@ -91,6 +91,27 @@ test('builds all basic marks as expected', () => {
   expect(result).toEqual(output)
 })
 
+test('builds weirdly complex lists without any issues', () => {
+  const {input, output} = require('./fixtures/016-deep-weird-lists')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('renders all default block styles', () => {
+  const {input, output} = require('./fixtures/017-all-default-block-styles')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('sorts marks correctly on equal number of occurences', () => {
+  const {input, output} = require('./fixtures/018-marks-all-the-way-down')
+  const marks = {
+    highlight: ({mark, children}) => h('span', {style: {backgroundColor: mark.color}}, children)
+  }
+  const result = render({blocks: input, serializers: {marks}})
+  expect(result).toEqual(output)
+})
+
 test('can specify custom serializer for custom block types', () => {
   const {input, output} = require('./fixtures/050-custom-block-type')
   const CodeRenderer = props => {
@@ -117,4 +138,30 @@ test('can override default serializers', () => {
     dataset: 'production'
   })
   expect(result).toEqual(output)
+})
+
+test('can specify custom serializers for custom marks', () => {
+  const {input, output} = require('./fixtures/052-custom-marks')
+  const highlight = ({mark, children}) =>
+    h('span', {style: {backgroundColor: mark.color}}, children)
+
+  const result = render({blocks: input, serializers: {marks: {highlight}}})
+  expect(result).toEqual(output)
+})
+
+test('can specify custom serializers for defaults marks', () => {
+  const {input, output} = require('./fixtures/053-override-default-marks')
+  const link = ({mark, children}) => h('a', {className: 'mahlink', href: mark.href}, children)
+
+  const result = render({blocks: input, serializers: {marks: {link}}})
+  expect(result).toEqual(output)
+})
+
+test('can specify custom class name for container', () => {
+  const input = [
+    {_key: 'a', _type: 'block', children: [{_type: 'span', marks: [], text: 'Hei'}]},
+    {_key: 'b', _type: 'block', children: [{_type: 'span', marks: [], text: 'Der'}]}
+  ]
+  const result = render({blocks: input, className: 'blockContent'})
+  expect(result).toEqual('<div class="blockContent"><p>Hei</p><p>Der</p></div>')
 })
