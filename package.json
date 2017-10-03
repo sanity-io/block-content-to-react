@@ -5,8 +5,7 @@
   "main": "lib/BlockContent.js",
   "umd": "umd/BlockContent.min.js",
   "scripts": {
-    "browserify":
-      "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/BlockContent.js -o umd/BlockContent.js --standalone=BlockContent --no-bundle-external",
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/BlockContent.js -o umd/BlockContent.js --standalone=BlockContent --no-bundle-external",
     "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output umd/*.js",
@@ -15,16 +14,14 @@
     "minify": "uglifyjs -c -m -- umd/BlockContent.js > umd/BlockContent.min.js",
     "postpublish": "npm run clean",
     "posttest": "eslint .",
-    "prepublish": "in-publish && npm run build || not-in-publish",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "keywords": [],
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-tree": "^0.3.0",
     "@sanity/generate-help-url": "^0.113.0",
-    "in-publish": "^2.0.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.5.10"
   },
@@ -39,7 +36,6 @@
     "eslint-config-sanity": "^3.0.1",
     "eslint-plugin-import": "^2.7.0",
     "jest": "^21.0.2",
-    "nyc": "^11.2.1",
     "prettier": "^1.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -59,6 +55,8 @@
   },
   "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js"]
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
   }
 }
