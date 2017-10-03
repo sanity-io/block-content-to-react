@@ -98,6 +98,28 @@ const highlight = props => {
 />
 ```
 
+### Customizing default serializer for `block`-type
+
+```js
+const BlockRenderer = props => {
+  const style = props.node.style || 'normal'
+
+  if (/^h\d/.test(style)) {
+    const level = style.replace(/[^\d]/g, '')
+    return <h2 className={`my-heading level-${level}`}>{props.children}</h2>
+  }
+
+  return style === 'blockquote'
+    ? <blockquote className="my-block-quote">{props.children}</blockquote>
+    : <p className="my-paragraph">{props.children}</p>
+}
+
+<BlockContent
+  blocks={input}
+  serializers={{types: {block: BlockRenderer}}}
+/>
+```
+
 ## License
 
 MIT-licensed. See LICENSE.

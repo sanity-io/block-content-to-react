@@ -45,10 +45,10 @@ function ListItemSerializer(props) {
 
 // Renderer of an actual block of type `block`. Confusing, we know.
 function BlockTypeSerializer(props) {
-  const style = props.node.style
+  const style = props.node.style || 'normal'
 
-  if (/^h\d/.test(style || '')) {
-    return React.createElement(style, null, props.children)
+  if (/^h\d/.test(style)) {
+    return h(style, null, props.children)
   }
 
   return style === 'blockquote'
