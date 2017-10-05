@@ -112,6 +112,18 @@ test('sorts marks correctly on equal number of occurences', () => {
   expect(result).toEqual(output)
 })
 
+test('handles keyless blocks/spans', () => {
+  const {input, output} = require('./fixtures/019-keyless')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('handles empty arrays', () => {
+  const {input, output} = require('./fixtures/020-empty-array')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
 test('can specify custom serializer for custom block types', () => {
   const {input, output} = require('./fixtures/050-custom-block-type')
   const CodeRenderer = props => {

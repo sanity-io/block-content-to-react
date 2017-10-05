@@ -79,17 +79,17 @@ function ImageSerializer(props) {
 }
 
 // Serializer that recursively calls itself, producing a React tree of spans
-function serializeSpan(span, serializers) {
+function serializeSpan(span, serializers, index) {
   if (typeof span === 'string') {
     return span
   }
 
   const serializedNode = objectAssign({}, span, {
-    children: span.children.map(child => serializeSpan(child, serializers))
+    children: span.children.map((child, i) => serializeSpan(child, serializers, i))
   })
 
   return h(serializers.span, {
-    key: span._key,
+    key: span._key || `span-${index}`,
     node: serializedNode,
     serializers
   })

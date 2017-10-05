@@ -21,7 +21,7 @@ function BlockContent(props) {
     return opts
   }, {})
 
-  function serializeNode(node) {
+  function serializeNode(node, index) {
     if (isList(node)) {
       return serializeList(node)
     }
@@ -31,17 +31,17 @@ function BlockContent(props) {
     }
 
     if (isSpan(node)) {
-      return serializeSpan(node, serializers)
+      return serializeSpan(node, serializers, index)
     }
 
-    return serializeBlock(node)
+    return serializeBlock(node, index)
   }
 
-  function serializeBlock(block) {
+  function serializeBlock(block, index) {
     const tree = buildMarksTree(block)
     const children = tree.map(serializeNode)
     const blockProps = {
-      key: block._key,
+      key: block._key || `block-${index}`,
       node: block,
       serializers,
       options
@@ -65,7 +65,11 @@ function BlockContent(props) {
   }
 
   const nodes = blocks.map(serializeNode)
-  return nodes.length > 1 ? h('div', {className: props.className}, nodes) : nodes[0]
+  if (nodes.length > 1) {
+    return h('div', {className: props.className}, nodes)
+  }
+
+  return nodes[0] || null
 }
 
 function isList(block) {
