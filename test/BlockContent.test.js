@@ -124,6 +124,12 @@ test('handles empty arrays', () => {
   expect(result).toEqual(output)
 })
 
+test('handles lists without level', () => {
+  const {input, output} = require('./fixtures/021-list-without-level')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
 test('can specify custom serializer for custom block types', () => {
   const {input, output} = require('./fixtures/050-custom-block-type')
   const CodeRenderer = props => {

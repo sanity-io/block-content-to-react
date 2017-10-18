@@ -71,7 +71,7 @@ function nestLists(blocks) {
 }
 
 function isListBlock(block) {
-  return Boolean(block.level)
+  return Boolean(block.listItem)
 }
 
 function blockMatchesList(block, list) {
