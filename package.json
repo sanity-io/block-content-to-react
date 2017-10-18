@@ -1,7 +1,7 @@
 {
   "name": "@sanity/block-content-to-react",
   "description": "React component for transforming Sanity block content to React components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/BlockContent.js",
   "umd": "umd/BlockContent.min.js",
   "scripts": {
