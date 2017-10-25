@@ -130,6 +130,12 @@ test('handles lists without level', () => {
   expect(result).toEqual(output)
 })
 
+test('handles inline non-span nodes', () => {
+  const {input, output} = require('./fixtures/022-inline-nodes')
+  const result = render({blocks: input, projectId: '3do82whm', dataset: 'production'})
+  expect(result).toEqual(output)
+})
+
 test('can specify custom serializer for custom block types', () => {
   const {input, output} = require('./fixtures/050-custom-block-type')
   const CodeRenderer = props => {
