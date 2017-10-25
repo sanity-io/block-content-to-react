@@ -42,7 +42,7 @@ module.exports = {
   output: [
     '<div>',
     '<p>Also, images are pretty common: ',
-    '<figure><img src="https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg"/></figure>',
+    '<img src="https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg"/>',
     ' - as you can see, they can also appear inline!</p>',
     '<p>Sibling paragraph</p>',
     '</div>'

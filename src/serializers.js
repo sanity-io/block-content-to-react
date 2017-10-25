@@ -6,15 +6,16 @@ const h = React.createElement
 
 // Low-level block serializer
 function BlockSerializer(props) {
-  const blockType = props.node._type
-  const serializer = props.serializers.types[blockType]
+  const {node, serializers, options, isInline, children} = props
+  const blockType = node._type
+  const serializer = serializers.types[blockType]
   if (!serializer) {
     throw new Error(
       `Unknown block type "${blockType}", please specify a serializer for it in the \`serializers.types\` prop`
     )
   }
 
-  return h(serializer, {node: props.node, options: props.options}, props.children)
+  return h(serializer, {node, options, isInline}, children)
 }
 
 // Low-level span serializer
@@ -75,7 +76,8 @@ function LinkSerializer(props) {
 }
 
 function ImageSerializer(props) {
-  return h('figure', null, h('img', {src: getImageUrl(props)}))
+  const img = h('img', {src: getImageUrl(props)})
+  return props.isInline ? img : h('figure', null, img)
 }
 
 // Serializer that recursively calls itself, producing a React tree of spans

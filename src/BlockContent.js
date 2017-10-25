@@ -21,7 +21,7 @@ function BlockContent(props) {
     return opts
   }, {})
 
-  function serializeNode(node, index) {
+  function serializeNode(node, index, siblings, isInline) {
     if (isList(node)) {
       return serializeList(node)
     }
@@ -34,15 +34,16 @@ function BlockContent(props) {
       return serializeSpan(node, serializers, index)
     }
 
-    return serializeBlock(node, index)
+    return serializeBlock(node, index, isInline)
   }
 
-  function serializeBlock(block, index) {
+  function serializeBlock(block, index, isInline) {
     const tree = buildMarksTree(block)
-    const children = tree.map(serializeNode)
+    const children = tree.map((node, i, siblings) => serializeNode(node, i, siblings, true))
     const blockProps = {
       key: block._key || `block-${index}`,
       node: block,
+      isInline,
       serializers,
       options
     }
