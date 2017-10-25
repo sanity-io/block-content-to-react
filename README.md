@@ -46,6 +46,7 @@ client.fetch('*[_type == "article"][0]').then(article => {
 - `serializers.marks` - Serializers for marks - data that annotates a text child of a block. See example usage below.
 - `serializers.list` - React component to use when rendering a list node
 - `serializers.listItem` - React component to use when rendering a list item node
+- `serializers.hardBreak` - React component to use when transforming newline characters to a hard break (`<br/>` by default, pass `false` to render newline character)
 - `imageOptions` - When encountering image blocks, this defines which query parameters to apply in order to control size/crop mode etc.
 
 In addition, in order to render images without materializing the asset documents, you should also specify:

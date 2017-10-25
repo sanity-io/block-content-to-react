@@ -8,6 +8,7 @@ const {defaultSerializers, serializeSpan} = require('./serializers')
 
 // Properties to extract from props and pass to serializers as options
 const optionProps = ['projectId', 'dataset', 'imageOptions']
+const isDefined = val => typeof val !== 'undefined'
 const h = React.createElement
 
 function BlockContent(props) {
@@ -15,7 +16,7 @@ function BlockContent(props) {
   const serializers = getSerializers(props.serializers)
   const options = optionProps.reduce((opts, key) => {
     const value = props[key]
-    if (typeof value !== 'undefined') {
+    if (isDefined(value)) {
       opts[key] = value
     }
     return opts
@@ -89,7 +90,7 @@ function isSpan(block) {
 function getSerializers(userSerializers) {
   return Object.keys(defaultSerializers).reduce((acc, key) => {
     if (typeof defaultSerializers[key] === 'function') {
-      acc[key] = userSerializers[key] || defaultSerializers[key]
+      acc[key] = isDefined(userSerializers[key]) ? userSerializers[key] : defaultSerializers[key]
     } else {
       acc[key] = objectAssign({}, defaultSerializers[key], userSerializers[key])
     }

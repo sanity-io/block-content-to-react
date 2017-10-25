@@ -53,7 +53,15 @@ const buildMarksTree = block => {
       currentNode = node
     })
 
-    currentNode.children.push(span.text)
+    // Split at newlines to make individual line chunks, but keep newline
+    // characters as individual elements in the array. We use these characters
+    // in the span serializer to trigger hard-break rendering
+    const lines = span.text.split('\n')
+    for (let line = lines.length; line-- > 1; ) {
+      lines.splice(line, 0, '\n')
+    }
+
+    currentNode.children = currentNode.children.concat(lines)
   })
 
   return rootNode.children

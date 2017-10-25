@@ -136,6 +136,25 @@ test('handles inline non-span nodes', () => {
   expect(result).toEqual(output)
 })
 
+test('handles hardbreaks', () => {
+  const {input, output} = require('./fixtures/023-hard-breaks')
+  const result = render({blocks: input})
+  expect(result).toEqual(output)
+})
+
+test('can disable hardbreak serializer', () => {
+  const {input, output} = require('./fixtures/023-hard-breaks')
+  const result = render({blocks: input, serializers: {hardBreak: false}})
+  expect(result).toEqual(output.replace(/<br\/>/g, '\n'))
+})
+
+test('can customize hardbreak serializer', () => {
+  const {input, output} = require('./fixtures/023-hard-breaks')
+  const hardBreak = () => h('br', {className: 'dat-newline'})
+  const result = render({blocks: input, serializers: {hardBreak}})
+  expect(result).toEqual(output.replace(/<br\/>/g, '<br class="dat-newline"/>'))
+})
+
 test('can specify custom serializer for custom block types', () => {
   const {input, output} = require('./fixtures/050-custom-block-type')
   const CodeRenderer = props => {

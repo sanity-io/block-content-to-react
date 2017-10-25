@@ -82,6 +82,10 @@ function ImageSerializer(props) {
 
 // Serializer that recursively calls itself, producing a React tree of spans
 function serializeSpan(span, serializers, index) {
+  if (span === '\n' && serializers.hardBreak) {
+    return h(serializers.hardBreak, {key: `hb-${index}`})
+  }
+
   if (typeof span === 'string') {
     return span
   }
@@ -97,6 +101,7 @@ function serializeSpan(span, serializers, index) {
   })
 }
 
+const HardBreakSerializer = () => h('br')
 const defaultMarkSerializers = {
   strong: RawMarkSerializer.bind(null, 'strong'),
   em: RawMarkSerializer.bind(null, 'em'),
@@ -119,7 +124,8 @@ const defaultSerializers = {
   listItem: ListItemSerializer,
 
   block: BlockSerializer,
-  span: SpanSerializer
+  span: SpanSerializer,
+  hardBreak: HardBreakSerializer
 }
 
 module.exports = {
