@@ -14,7 +14,9 @@ node_modules
 # Other snargh
 .DS_Store
 
-temp
+# Lockfiles
+yarn.lock
+package-lock.json
 
 # UMD bundle
 umd

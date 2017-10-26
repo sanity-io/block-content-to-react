@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@sanity/block-content-tests": "^0.0.3",
+    "@sanity/block-content-to-hyperscript": "^1.2.0",
     "@sanity/generate-help-url": "^0.118.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.5.10"
