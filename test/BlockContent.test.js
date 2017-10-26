@@ -4,73 +4,74 @@ const ReactDOM = require('react-dom/server')
 const BlockContent = require('../src/BlockContent')
 
 const h = React.createElement
+const normalize = input => input
 
 const render = props => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
 
 test('builds empty tree on empty block', () => {
   const {input, output} = require('./fixtures/001-empty-block')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds simple one-node tree on single, markless span', () => {
   const {input, output} = require('./fixtures/002-single-span')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds simple multi-node tree on markless spans', () => {
   const {input, output} = require('./fixtures/003-multiple-spans')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds annotated span on simple mark', () => {
   const {input, output} = require('./fixtures/004-basic-mark-single-span')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds annotated, joined span on adjacent, equal marks', () => {
   const {input, output} = require('./fixtures/005-basic-mark-multiple-adjacent-spans')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds annotated, nested spans in tree format', () => {
   const {input, output} = require('./fixtures/006-basic-mark-nested-marks')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds annotated spans with expanded marks on object-style marks', () => {
   const {input, output} = require('./fixtures/007-link-mark-def')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds correct structure from advanced, nested mark structure', () => {
   const {input, output} = require('./fixtures/009-messy-link-text')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds bullet lists in parent container', () => {
   const {input, output} = require('./fixtures/010-basic-bullet-list')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds numbered lists in parent container', () => {
   const {input, output} = require('./fixtures/011-basic-numbered-list')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds images with passed projectId/dataset', () => {
   const {input, output} = require('./fixtures/012-image-support')
   const result = render({blocks: input, projectId: '3do82whm', dataset: 'production'})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds images with passed query params', () => {
@@ -82,77 +83,78 @@ test('builds images with passed query params', () => {
 test('builds nested lists', () => {
   const {input, output} = require('./fixtures/014-nested-lists')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds all basic marks as expected', () => {
   const {input, output} = require('./fixtures/015-all-basic-marks')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('builds weirdly complex lists without any issues', () => {
   const {input, output} = require('./fixtures/016-deep-weird-lists')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('renders all default block styles', () => {
   const {input, output} = require('./fixtures/017-all-default-block-styles')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('sorts marks correctly on equal number of occurences', () => {
   const {input, output} = require('./fixtures/018-marks-all-the-way-down')
   const marks = {
-    highlight: ({mark, children}) => h('span', {style: {backgroundColor: mark.color}}, children)
+    highlight: ({mark, children}) =>
+      h('span', {style: {border: `${mark.thickness}px solid`}}, children)
   }
   const result = render({blocks: input, serializers: {marks}})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('handles keyless blocks/spans', () => {
   const {input, output} = require('./fixtures/019-keyless')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('handles empty arrays', () => {
   const {input, output} = require('./fixtures/020-empty-array')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('handles lists without level', () => {
   const {input, output} = require('./fixtures/021-list-without-level')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('handles inline non-span nodes', () => {
   const {input, output} = require('./fixtures/022-inline-nodes')
   const result = render({blocks: input, projectId: '3do82whm', dataset: 'production'})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('handles hardbreaks', () => {
   const {input, output} = require('./fixtures/023-hard-breaks')
   const result = render({blocks: input})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('can disable hardbreak serializer', () => {
   const {input, output} = require('./fixtures/023-hard-breaks')
   const result = render({blocks: input, serializers: {hardBreak: false}})
-  expect(result).toEqual(output.replace(/<br\/>/g, '\n'))
+  expect(result).toEqual(normalize(output.replace(/<br\/>/g, '\n')))
 })
 
 test('can customize hardbreak serializer', () => {
   const {input, output} = require('./fixtures/023-hard-breaks')
   const hardBreak = () => h('br', {className: 'dat-newline'})
   const result = render({blocks: input, serializers: {hardBreak}})
-  expect(result).toEqual(output.replace(/<br\/>/g, '<br class="dat-newline"/>'))
+  expect(result).toEqual(normalize(output.replace(/<br\/>/g, '<br class="dat-newline"/>')))
 })
 
 test('can specify custom serializer for custom block types', () => {
@@ -167,7 +169,7 @@ test('can specify custom serializer for custom block types', () => {
   }
   const types = {code: CodeRenderer}
   const result = render({blocks: input, serializers: {types}})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('can override default serializers', () => {
@@ -180,16 +182,16 @@ test('can override default serializers', () => {
     projectId: '3do82whm',
     dataset: 'production'
   })
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('can specify custom serializers for custom marks', () => {
   const {input, output} = require('./fixtures/052-custom-marks')
   const highlight = ({mark, children}) =>
-    h('span', {style: {backgroundColor: mark.color}}, children)
+    h('span', {style: {border: `${mark.thickness}px solid`}}, children)
 
   const result = render({blocks: input, serializers: {marks: {highlight}}})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('can specify custom serializers for defaults marks', () => {
@@ -197,7 +199,7 @@ test('can specify custom serializers for defaults marks', () => {
   const link = ({mark, children}) => h('a', {className: 'mahlink', href: mark.href}, children)
 
   const result = render({blocks: input, serializers: {marks: {link}}})
-  expect(result).toEqual(output)
+  expect(result).toEqual(normalize(output))
 })
 
 test('can specify custom class name for container', () => {
@@ -206,5 +208,5 @@ test('can specify custom class name for container', () => {
     {_key: 'b', _type: 'block', children: [{_type: 'span', marks: [], text: 'Der'}]}
   ]
   const result = render({blocks: input, className: 'blockContent'})
-  expect(result).toEqual('<div class="blockContent"><p>Hei</p><p>Der</p></div>')
+  expect(result).toEqual(normalize('<div class="blockContent"><p>Hei</p><p>Der</p></div>'))
 })

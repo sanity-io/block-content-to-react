@@ -19,19 +19,19 @@ module.exports = {
       {
         _key: 'mark1',
         _type: 'highlight',
-        color: '#bf1942'
+        thickness: 1
       },
       {
         _key: 'mark2',
         _type: 'highlight',
-        color: '#f00baa'
+        thickness: 3
       }
     ]
   },
   output: [
     '<p>',
-    '<span style="background-color:#bf1942;">',
-    '<span style="background-color:#f00baa;">',
+    '<span style="border:1px solid;">',
+    '<span style="border:3px solid;">',
     '<em>Sanity FTW</em>',
     '</span>',
     '</span>',

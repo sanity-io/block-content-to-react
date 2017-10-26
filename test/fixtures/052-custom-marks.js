@@ -13,9 +13,9 @@ module.exports = {
       {
         _key: 'mark1',
         _type: 'highlight',
-        color: '#bf1942'
+        thickness: 5
       }
     ]
   },
-  output: '<p><span style="background-color:#bf1942;">Sanity</span></p>'
+  output: '<p><span style="border:5px solid;">Sanity</span></p>'
 }
