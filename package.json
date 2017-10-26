@@ -21,13 +21,14 @@
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/generate-help-url": "^0.113.0",
+    "@sanity/block-content-tests": "^0.0.3",
+    "@sanity/generate-help-url": "^0.118.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.6.0",
     "browserify": "^14.4.0",
     "envify": "^4.1.0",
@@ -37,8 +38,8 @@
     "eslint-plugin-import": "^2.7.0",
     "jest": "^21.0.2",
     "prettier": "^1.7.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "rimraf": "^2.6.2",
     "uglify-js": "^3.1.0",
     "uglifyify": "^4.0.3"
