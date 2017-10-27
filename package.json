@@ -1,12 +1,11 @@
 {
   "name": "@sanity/block-content-to-react",
   "description": "React component for transforming Sanity block content to React components",
-  "version": "1.3.0-rc1",
+  "version": "1.3.0",
   "main": "lib/BlockContent.js",
   "umd": "umd/BlockContent.min.js",
   "scripts": {
-    "browserify":
-      "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/BlockContent.js -o umd/BlockContent.js --standalone=BlockContent --no-bundle-external",
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/BlockContent.js -o umd/BlockContent.js --standalone=BlockContent --no-bundle-external",
     "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
     "watch": "npm run compile -- --watch",
     "clean": "rimraf lib coverage .nyc_output umd/*.js",
@@ -56,6 +55,8 @@
   },
   "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js"]
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
   }
 }
