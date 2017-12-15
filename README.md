@@ -1,6 +1,6 @@
 # block-content-to-react
 
-Render an array of [block text](https://sanity.io/docs/schema-types/block-text-type) from Sanity with React.
+Render an array of [block text](https://www.sanity.io/docs/schema-types/block-type) from Sanity with React.
 
 ## Installing
 
