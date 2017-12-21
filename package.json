@@ -18,7 +18,7 @@
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-hyperscript": "^1.2.4",
+    "@sanity/block-content-to-hyperscript": "^1.2.6",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
