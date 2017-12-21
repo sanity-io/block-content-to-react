@@ -1,7 +1,7 @@
 {
   "name": "@sanity/block-content-to-react",
   "description": "React component for transforming Sanity block content to React components",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "main": "lib/BlockContent.js",
   "scripts": {
     "build": "npm run clean && npm run compile",
