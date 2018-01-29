@@ -8,15 +8,18 @@ const {
 
 const renderNode = React.createElement
 const {defaultSerializers} = getSerializers(renderNode)
-const BlockContent = blocksToNodes.bind(null, renderNode)
+
+const SanityBlockContent = props => {
+  return blocksToNodes(renderNode, Object.assign({blocks: []}, props))
+}
 
 // Expose default serializers to the user
-BlockContent.defaultSerializers = defaultSerializers
+SanityBlockContent.defaultSerializers = defaultSerializers
 
 // Expose logic for building image URLs from an image reference/node
-BlockContent.getImageUrl = getImageUrl
+SanityBlockContent.getImageUrl = getImageUrl
 
-BlockContent.propTypes = {
+SanityBlockContent.propTypes = {
   className: PropTypes.string,
 
   // When rendering images, we need project id and dataset, unless images are materialized
@@ -50,9 +53,9 @@ BlockContent.propTypes = {
   ]).isRequired
 }
 
-BlockContent.defaultProps = {
-  serializers: BlockContent.defaultSerializers,
+SanityBlockContent.defaultProps = {
+  serializers: SanityBlockContent.defaultSerializers,
   imageOptions: {}
 }
 
-module.exports = BlockContent
+module.exports = SanityBlockContent

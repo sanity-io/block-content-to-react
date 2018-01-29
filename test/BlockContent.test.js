@@ -14,3 +14,7 @@ const normalize = html =>
   })
 
 runTests({render, h, normalize, getImageUrl})
+
+test('renders empty block with react proptype error', () => {
+  expect(h(BlockContent, {})).toMatchSnapshot()
+})
