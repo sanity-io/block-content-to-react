@@ -29,7 +29,7 @@
     "envify": "^4.1.0",
     "eslint": "^4.14.0",
     "eslint-config-prettier": "^2.4.0",
-    "eslint-config-sanity": "^3.0.1",
+    "eslint-config-sanity": "^4.0.2",
     "eslint-plugin-import": "^2.7.0",
     "jest": "^22.0.4",
     "prettier": "^1.7.0",

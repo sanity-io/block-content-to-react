@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty block with react proptype error 1`] = `
+<SanityBlockContent
+  imageOptions={Object {}}
+  serializers={
+    Object {
+      "block": [Function],
+      "hardBreak": [Function],
+      "list": [Function],
+      "listItem": [Function],
+      "marks": Object {
+        "code": [Function],
+        "em": [Function],
+        "link": [Function],
+        "strike-through": [Function],
+        "strong": [Function],
+        "underline": [Function],
+      },
+      "span": [Function],
+      "types": Object {
+        "block": [Function],
+        "image": [Function],
+      },
+    }
+  }
+/>
+`;
