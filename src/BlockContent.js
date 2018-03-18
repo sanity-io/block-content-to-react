@@ -1,20 +1,26 @@
 const React = require('react')
 const PropTypes = require('prop-types')
+
 const {
-  getSerializers,
   getImageUrl,
-  blocksToNodes
+  blocksToNodes,
+  mergeSerializers
 } = require('@sanity/block-content-to-hyperscript/internals')
+const {serializers, renderProps} = require('./targets/dom')
 
 const renderNode = React.createElement
-const {defaultSerializers} = getSerializers(renderNode)
+const defaultProps = Object.assign({blocks: []}, renderProps)
 
 const SanityBlockContent = props => {
-  return blocksToNodes(renderNode, Object.assign({blocks: []}, props))
+  const customSerializers = mergeSerializers(serializers, props.serializers)
+  return blocksToNodes(
+    renderNode,
+    Object.assign({}, defaultProps, props, {serializers: customSerializers})
+  )
 }
 
 // Expose default serializers to the user
-SanityBlockContent.defaultSerializers = defaultSerializers
+SanityBlockContent.defaultSerializers = serializers
 
 // Expose logic for building image URLs from an image reference/node
 SanityBlockContent.getImageUrl = getImageUrl
@@ -54,7 +60,7 @@ SanityBlockContent.propTypes = {
 }
 
 SanityBlockContent.defaultProps = {
-  serializers: SanityBlockContent.defaultSerializers,
+  serializers: {},
   imageOptions: {}
 }
 
