@@ -1,9 +1,18 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["ie >= 9"]
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["ie >= 9"]
+        }
       }
-    }]
-  ]
+    ]
+  ],
+
+  "env": {
+    "test": {
+      "presets": ["react-native"]
+    }
+  }
 }

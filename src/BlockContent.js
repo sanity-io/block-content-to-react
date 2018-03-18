@@ -1,18 +1,19 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-
-const {
-  getImageUrl,
-  blocksToNodes,
-  mergeSerializers
-} = require('@sanity/block-content-to-hyperscript/internals')
+const internals = require('@sanity/block-content-to-hyperscript/internals')
 const {serializers, renderProps} = require('./targets/dom')
+
+const {getImageUrl, blocksToNodes, mergeSerializers} = internals
 
 const renderNode = React.createElement
 const defaultProps = Object.assign({blocks: []}, renderProps)
 
 const SanityBlockContent = props => {
-  const customSerializers = mergeSerializers(serializers, props.serializers)
+  const customSerializers = mergeSerializers(
+    SanityBlockContent.defaultSerializers,
+    props.serializers
+  )
+
   return blocksToNodes(
     renderNode,
     Object.assign({}, defaultProps, props, {serializers: customSerializers})
