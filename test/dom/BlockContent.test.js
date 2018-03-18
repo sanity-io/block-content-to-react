@@ -2,7 +2,7 @@
 const React = require('react')
 const ReactDOM = require('react-dom/server')
 const runTests = require('@sanity/block-content-tests')
-const BlockContent = require('../src/BlockContent')
+const BlockContent = require('../../src/BlockContent')
 
 const h = React.createElement
 const getImageUrl = BlockContent.getImageUrl

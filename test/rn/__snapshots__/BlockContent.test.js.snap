@@ -1,0 +1,7174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`001-empty-block 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  />
+</View>
+`;
+
+exports[`002-single-span 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Plain text.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`003-multiple-spans 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Span number one. 
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      And span number two.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`004-basic-mark-single-span 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "rgba(27, 31, 35, 0.05)",
+          "color": "#24292e",
+          "paddingHorizontal": 5,
+          "paddingVertical": 3,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        sanity
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+       is the name of the CLI tool.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`005-basic-mark-multiple-adjacent-spans 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        A word of
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+         warning;
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+       Sanity is addictive.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`006-basic-mark-nested-marks 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        A word of 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontStyle": "italic",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          warning;
+        </Text>
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+       Sanity is addictive.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`007-link-mark-def 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      A word of warning; 
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Sanity
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+       is addictive.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`008-plain-header-block 1`] = `
+<View
+  style={
+    Object {
+      "marginVertical": 20,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Dat heading
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`009-messy-link-text 1`] = `
+<View
+  style={
+    Object {
+      "borderLeftColor": "#dfe2e5",
+      "borderLeftWidth": 3.5,
+      "marginBottom": 16,
+      "paddingHorizontal": 14,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Sanity
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+       can be used to power almost any 
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontStyle": "italic",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            app
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+           or website
+        </Text>
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      .
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`010-basic-bullet-list 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Let's test some of these lists!
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Bullet 1
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Bullet 2
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Bullet 3
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`011-basic-numbered-list 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Let's test some of these lists!
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        1. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Number 1
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        2. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Number 2
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        3. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Number 3
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`012-image-support 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Also, images are pretty common.
+      </Text>
+    </Text>
+  </View>
+  <Image
+    imgHeight={2304}
+    imgWidth={3456}
+    source={
+      Object {
+        "uri": "https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": 500,
+        "width": 750,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`013-materialized-image-support 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Also, images are pretty common.
+      </Text>
+    </Text>
+  </View>
+  <View />
+</View>
+`;
+
+exports[`014-nested-lists 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Span
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 1, level 1
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 2, level 1
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              1. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Item 3, level 2
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "marginVertical": 16,
+                    },
+                    Object {
+                      "paddingLeft": 48,
+                    },
+                    Object {
+                      "marginVertical": 0,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={undefined}
+                  >
+                    1. 
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "flexWrap": "wrap",
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                    >
+                      Item 4, level 3
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              2. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Item 5, level 2
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              3. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Item 6, level 2
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 7, level 1
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 8, level 1
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        1. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 1 of list 2
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        2. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 2 of list 2
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              1. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Item 3 of list 2, level 2
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Just a block
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`015-all-basic-marks 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "rgba(27, 31, 35, 0.05)",
+          "color": "#24292e",
+          "paddingHorizontal": 5,
+          "paddingVertical": 3,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        code
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        strong
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontStyle": "italic",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        em
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        underline
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "textDecorationLine": "line-through",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        strike-through
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        link
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`016-deep-weird-lists 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item a
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item b
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        1. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 1
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        2. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 2
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              1. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Item 2, a
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              2. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Item 2, b
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        3. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Item 3
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          In
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Out
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          In
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Out
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "marginVertical": 16,
+                    },
+                    Object {
+                      "paddingLeft": 48,
+                    },
+                    Object {
+                      "marginVertical": 0,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginLeft": 10,
+                        "marginRight": 10,
+                      }
+                    }
+                  >
+                    ·
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "flexWrap": "wrap",
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                    >
+                      Even More
+                    </Text>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "marginVertical": 16,
+                          },
+                          Object {
+                            "paddingLeft": 64,
+                          },
+                          Object {
+                            "marginVertical": 0,
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                            "justifyContent": "flex-start",
+                          }
+                        }
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "fontWeight": "bold",
+                              "marginLeft": 10,
+                              "marginRight": 10,
+                            }
+                          }
+                        >
+                          ·
+                        </Text>
+                        <View
+                          style={
+                            Object {
+                              "flex": 1,
+                              "flexWrap": "wrap",
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                          >
+                            Even deeper
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Two steps back
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          All the way back
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 48,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Skip a step
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        1. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          New list
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={undefined}
+            >
+              1. 
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Next level
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          New bullet list
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`017-all-default-block-styles 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginVertical": 22,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 32,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Sanity
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        The outline
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        More narrow details
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Even less thing
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 14,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Small header
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 10,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lowest thing
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderLeftColor": "#dfe2e5",
+        "borderLeftWidth": 3.5,
+        "marginBottom": 16,
+        "paddingHorizontal": 14,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        A block quote of awesomeness
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Plain old normal block
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Default to "normal" style
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`018-marks-all-the-way-down 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "yellow",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "yellow",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontStyle": "italic",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Sanity
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+             FTW
+          </Text>
+        </Text>
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`019-keyless 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        sanity
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+         is a full time job
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        in a world that 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        is always changing
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`020-empty-array 1`] = `<View />`;
+
+exports[`021-list-without-level 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        In-person access: Research appointments
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        The collection may be examined by arranging a research appointment 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          in advance
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+         by contacting the ACT archivist by email or phone. ACT generally does not accept walk-in research patrons, although requests may be made in person at the Archivist’s office (E15-222). ACT recommends arranging appointments at least three weeks in advance in order to ensure availability. ACT reserves the right to cancel research appointments at any time. Appointment scheduling is subject to institute holidays and closings. 
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        The collection space is located at:
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        
+
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        20 Ames Street
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        
+
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Building E15-235
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        
+
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Cambridge, Massachusetts 02139
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        In-person access: Space policies
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": NaN,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          The Archivist or an authorized ACT staff member must attend researchers at all times.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          No pens, markers, or adhesives (e.g. “Post-it” notes) are permitted in the collection space; pencils will be provided upon request.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Cotton gloves must be worn when handling collection materials; gloves will be provided by the Archivist.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          No food or beverages are permitted in the collection space.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Laptop use is permitted in the collection space, as well as digital cameras and cellphones. Unless otherwise authorized, any equipment in the collection space (including but not limited to computers, telephones, scanners, and viewing equipment) is for use by ACT staff members only.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Photocopying machines in the ACT hallway will be accessible by patrons under the supervision of the Archivist.
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Patrons may only browse materials that have been made available for access.
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Remote access: Reference requests
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        For patrons who are unable to arrange for an on-campus visit to the Archives and Special Collections, reference questions may be directed to the Archivist remotely by email or phone. Generally, emails and phone calls will receive a response within 72 hours of receipt. Requests are typically filled in the order they are received.
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Use of patron information
+        </Text>
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Patrons requesting collection materials in person or remotely may be asked to provide certain information to the Archivist, such as contact information and topic(s) of research. This information is only used to track requests for statistical evaluations of collection use and will not be disclosed to outside organizations for any purpose. ACT will endeavor to protect the privacy of all patrons accessing collections.
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Fees
+        </Text>
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        ACT reserves the right to charge an hourly rate for requests that require more than three hours of research on behalf of a patron (remote requests). Collection materials may be scanned and made available upon request, but digitization of certain materials may incur costs. Additionally, requests to publish, exhibit, or otherwise reproduce and display collection materials may incur use fees.
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Use of MIT-owned materials by patrons
+        </Text>
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Permission to examine collection materials in person or remotely (by receiving transfers of digitized materials) does not imply or grant permission to publish or exhibit those materials. Permission to publish, exhibit, or otherwise use collection materials is granted on a case by case basis in accordance with MIT policy, restrictions that may have been placed on materials by donors or depositors, and copyright law. To request permission to publish, exhibit, or otherwise use collection materials, contact the Archivist. 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          When permission is granted by MIT, patrons must comply with all guidelines provided by ACT for citations, credits, and copyright statements. Exclusive rights to examine or publish material will not be granted.
+        </Text>
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`022-inline-nodes 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Also, images are pretty common: 
+      </Text>
+      <Image
+        imgHeight={2304}
+        imgWidth={3456}
+        source={
+          Object {
+            "uri": "https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 500,
+            "width": 750,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+         - as you can see, they can also appear inline!
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Sibling paragraph
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`023-hard-breaks 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      A paragraph
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      
+
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      can have hard
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      
+
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      
+
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      breaks.
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`024-inline-images 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "rgba(27, 31, 35, 0.05)",
+            "color": "#24292e",
+            "paddingHorizontal": 5,
+            "paddingVertical": 3,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Foo! Bar!
+        </Text>
+      </Text>
+      <Image
+        imgHeight={120}
+        imgWidth={162}
+        source={
+          Object {
+            "uri": "https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png",
+          }
+        }
+        style={
+          Object {
+            "height": 555.5555555555555,
+            "width": 750,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Neat
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "rgba(27, 31, 35, 0.05)",
+            "color": "#24292e",
+            "paddingHorizontal": 5,
+            "paddingVertical": 3,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Foo! Bar! 
+        </Text>
+      </Text>
+      <Image
+        imgHeight={120}
+        imgWidth={162}
+        source={
+          Object {
+            "uri": "https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png",
+          }
+        }
+        style={
+          Object {
+            "height": 555.5555555555555,
+            "width": 750,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "rgba(27, 31, 35, 0.05)",
+            "color": "#24292e",
+            "paddingHorizontal": 5,
+            "paddingVertical": 3,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+           Baz!
+        </Text>
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Foo! Bar! 
+      </Text>
+      <Image
+        imgHeight={120}
+        imgWidth={162}
+        source={
+          Object {
+            "uri": "https://cdn.sanity.io/images/3do82whm/production/magnificent_beastZ8Z5qZHHxgrTJf6Hhz-162x120.png",
+          }
+        }
+        style={
+          Object {
+            "height": 555.5555555555555,
+            "width": 750,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "backgroundColor": "rgba(27, 31, 35, 0.05)",
+            "color": "#24292e",
+            "paddingHorizontal": 5,
+            "paddingVertical": 3,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+           Baz!
+        </Text>
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`050-custom-block-type 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "fontFamily": "monospace",
+      "padding": 16,
+    }
+  }
+>
+  const foo = require('foo')
+
+foo('hi there', (err, thing) =&gt; {
+  console.log(err)
+})
+
+</Text>
+`;
+
+exports[`051-override-defaults 1`] = `
+<Image
+  imgHeight={2304}
+  imgWidth={3456}
+  source={
+    Object {
+      "uri": "https://cdn.sanity.io/images/3do82whm/production/YiOKD0O6AdjKPaK24WtbOEv0-3456x2304.jpg",
+    }
+  }
+  style={
+    Object {
+      "height": 500,
+      "width": 750,
+    }
+  }
+/>
+`;
+
+exports[`052-custom-marks 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "yellow",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Sanity
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`053-override-default-marks 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Sanity
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`060-list-issue 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        1. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        2. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        3. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        4. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        5. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        6. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        7. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        8. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        9. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        10. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontStyle": "italic",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 18,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginVertical": 16,
+              },
+              Object {
+                "paddingLeft": 32,
+              },
+              Object {
+                "marginVertical": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "bold",
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                }
+              }
+            >
+              ·
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Lorem ipsum
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontStyle": "italic",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        1. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        2. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        3. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        4. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+        5. 
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Lorem ipsum
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Lorem ipsum
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`061-missing-mark-serializer 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        A word of 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontStyle": "italic",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          warning;
+        </Text>
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+       Sanity is addictive.
+    </Text>
+  </Text>
+</View>
+`;

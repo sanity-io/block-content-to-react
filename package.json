@@ -12,7 +12,7 @@
     "postpublish": "npm run clean",
     "posttest": "eslint .",
     "prepublishOnly": "npm run build",
-    "test": "jest"
+    "test": "NODE_ENV=test jest test/dom-* && NODE_ENV=test jest --preset react-native test/rn-*"
   },
   "keywords": [],
   "author": "Sanity <hello@sanity.io>",
@@ -26,6 +26,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-react-native": "^4.0.0",
     "envify": "^4.1.0",
     "eslint": "^4.19.0",
     "eslint-config-prettier": "^2.4.0",
@@ -35,6 +36,8 @@
     "prettier": "^1.11.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-native": "^0.54.2",
+    "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
@@ -53,6 +56,7 @@
   },
   "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
   "jest": {
+    "testEnvironment": "node",
     "collectCoverageFrom": [
       "src/**/*.js"
     ]

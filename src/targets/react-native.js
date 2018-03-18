@@ -133,7 +133,7 @@ const serializers = mergeSerializers(defaultSerializers, {
   container: View,
   markFallback: Text,
   text: Text,
-  empty: null
+  empty: View
 })
 
 module.exports = {
