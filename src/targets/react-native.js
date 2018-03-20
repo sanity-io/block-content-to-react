@@ -110,7 +110,7 @@ const ListItemSerializer = props => {
 
 const HardBreakSerializer = () => h(Text, null, '\n')
 
-const {defaultSerializers} = getSerializers(h)
+const {defaultSerializers, serializeSpan} = getSerializers(h)
 const serializers = mergeSerializers(defaultSerializers, {
   // Common overrides
   types: {
@@ -138,5 +138,6 @@ const serializers = mergeSerializers(defaultSerializers, {
 
 module.exports = {
   serializers,
+  serializeSpan,
   renderProps: {listNestMode: 'normal'}
 }
