@@ -13,7 +13,12 @@ const SanityBlockContent = props => {
     props.serializers
   )
 
-  return blocksToNodes(renderNode, Object.assign({}, defaultProps, props, {serializers: customSerializers}), serializers, serializeSpan)
+  return blocksToNodes(
+    renderNode,
+    Object.assign({}, defaultProps, props, {serializers: customSerializers}),
+    serializers,
+    serializeSpan
+  )
 }
 
 // Expose default serializers to the user
