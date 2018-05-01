@@ -5,7 +5,6 @@ const {serializers, serializeSpan, renderProps} = require('./targets/dom')
 
 const {getImageUrl, blocksToNodes, mergeSerializers} = internals
 const renderNode = React.createElement
-const defaultProps = Object.assign({blocks: []}, renderProps)
 
 const SanityBlockContent = props => {
   const customSerializers = mergeSerializers(
@@ -13,12 +12,12 @@ const SanityBlockContent = props => {
     props.serializers
   )
 
-  return blocksToNodes(
-    renderNode,
-    Object.assign({}, defaultProps, props, {serializers: customSerializers}),
-    serializers,
-    serializeSpan
-  )
+  const blockProps = Object.assign({}, renderProps, props, {
+    serializers: customSerializers,
+    blocks: props.blocks || []
+  })
+
+  return blocksToNodes(renderNode, blockProps, serializers, serializeSpan)
 }
 
 // Expose default serializers to the user

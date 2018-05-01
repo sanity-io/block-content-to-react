@@ -20,6 +20,11 @@ test('renders empty block with react proptype error', () => {
   expect(render({})).toMatchSnapshot()
 })
 
+test('renders uses empty array instead of undefined/null blocks prop', () => {
+  expect(render({blocks: undefined})).toMatchSnapshot()
+  expect(render({blocks: null})).toMatchSnapshot()
+})
+
 test('should reuse serializers', () => {
   const block = {
     _key: '58cf8aa1fc74',
