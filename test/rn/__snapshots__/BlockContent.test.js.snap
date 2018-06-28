@@ -3739,6 +3739,48 @@ exports[`024-inline-images 1`] = `
 </View>
 `;
 
+exports[`025-image-with-hotspot 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Also, images are pretty common.
+      </Text>
+    </Text>
+  </View>
+  <Image
+    imgHeight={1333}
+    imgWidth={2000}
+    source={
+      Object {
+        "uri": "https://cdn.sanity.io/images/3do82whm/production/c2f0fc30003e6d7c79dcb5338a9b3d297cab4a8a-2000x1333.jpg?rect=468,128,1084,1077",
+      }
+    }
+    style={
+      Object {
+        "height": 499.875,
+        "width": 750,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`050-custom-block-type 1`] = `
 <Text
   accessible={true}
