@@ -18,11 +18,11 @@
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-hyperscript": "^1.3.6",
+    "@sanity/block-content-to-hyperscript": "^2.0.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
-    "@sanity/block-content-tests": "^0.0.11",
+    "@sanity/block-content-tests": "^0.1.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.6.0",

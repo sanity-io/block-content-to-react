@@ -86,13 +86,19 @@ const ListSerializer = props => {
 
 const ListItemSerializer = props => {
   const type = props.node.listItem
+  const children =
+    !props.node.style || props.node.style === 'normal'
+      ? // Don't wrap plain text in paragraphs inside of a list item
+        props.children
+      : // But wrap any other style in whatever the block serializer says to use
+        h(props.serializers.types.block, props, props.children)
 
   if (type === 'bullet') {
     return h(
       View,
       {key: props.node._key, style: styles.listItemWrapper},
       h(Text, {style: styles.bulletlistIcon}, '\u00B7'),
-      h(View, {style: styles.listItem}, props.children)
+      h(View, {style: styles.listItem}, children)
     )
   }
 
@@ -101,11 +107,11 @@ const ListItemSerializer = props => {
       View,
       {key: props.node._key, style: styles.listItemWrapper},
       h(Text, {style: styles.numberlistIcon}, `${props.index + 1}. `),
-      h(View, {style: styles.listItem}, props.children)
+      h(View, {style: styles.listItem}, children)
     )
   }
 
-  return h(View, {key: props.node._key, style: styles.listItem}, props.children)
+  return h(View, {key: props.node._key, style: styles.listItem}, children)
 }
 
 const HardBreakSerializer = () => h(Text, null, '\n')

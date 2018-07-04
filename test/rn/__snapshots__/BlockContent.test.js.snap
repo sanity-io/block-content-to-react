@@ -3729,6 +3729,183 @@ exports[`025-image-with-hotspot 1`] = `
 </View>
 `;
 
+exports[`027-styled-list-items 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Let's test some of these lists!
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginVertical": 16,
+        },
+        Object {
+          "paddingLeft": 16,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Bullet 1
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "marginVertical": 22,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 32,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Bullet 2
+            </Text>
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginLeft": 10,
+            "marginRight": 10,
+          }
+        }
+      >
+        ·
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Bullet 3
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`050-custom-block-type 1`] = `
 <Text
   accessible={true}
