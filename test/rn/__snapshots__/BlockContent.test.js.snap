@@ -12,7 +12,6 @@ exports[`001-empty-block 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   />
 </View>
 `;
@@ -29,7 +28,6 @@ exports[`002-single-span 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -54,7 +52,6 @@ exports[`003-multiple-spans 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -86,7 +83,6 @@ exports[`004-basic-mark-single-span 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -132,7 +128,6 @@ exports[`005-basic-mark-multiple-adjacent-spans 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -182,7 +177,6 @@ exports[`006-basic-mark-nested-marks 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -243,7 +237,6 @@ exports[`007-link-mark-def 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -327,7 +320,6 @@ exports[`009-messy-link-text 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -427,7 +419,6 @@ exports[`010-basic-bullet-list 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -585,7 +576,6 @@ exports[`011-basic-numbered-list 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -621,7 +611,6 @@ exports[`011-basic-numbered-list 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         1. 
       </Text>
@@ -654,7 +643,6 @@ exports[`011-basic-numbered-list 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         2. 
       </Text>
@@ -687,7 +675,6 @@ exports[`011-basic-numbered-list 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         3. 
       </Text>
@@ -725,7 +712,6 @@ exports[`012-image-support 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -767,7 +753,6 @@ exports[`013-materialized-image-support 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -795,7 +780,6 @@ exports[`014-nested-lists 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -922,7 +906,6 @@ exports[`014-nested-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               1. 
             </Text>
@@ -968,7 +951,6 @@ exports[`014-nested-lists 1`] = `
                     accessible={true}
                     allowFontScaling={true}
                     ellipsizeMode="tail"
-                    style={undefined}
                   >
                     1. 
                   </Text>
@@ -1004,7 +986,6 @@ exports[`014-nested-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               2. 
             </Text>
@@ -1037,7 +1018,6 @@ exports[`014-nested-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               3. 
             </Text>
@@ -1165,7 +1145,6 @@ exports[`014-nested-lists 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         1. 
       </Text>
@@ -1198,7 +1177,6 @@ exports[`014-nested-lists 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         2. 
       </Text>
@@ -1244,7 +1222,6 @@ exports[`014-nested-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               1. 
             </Text>
@@ -1280,7 +1257,6 @@ exports[`014-nested-lists 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -1306,7 +1282,6 @@ exports[`015-all-basic-marks 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -1543,7 +1518,6 @@ exports[`016-deep-weird-lists 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         1. 
       </Text>
@@ -1576,7 +1550,6 @@ exports[`016-deep-weird-lists 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         2. 
       </Text>
@@ -1622,7 +1595,6 @@ exports[`016-deep-weird-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               1. 
             </Text>
@@ -1655,7 +1627,6 @@ exports[`016-deep-weird-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               2. 
             </Text>
@@ -1691,7 +1662,6 @@ exports[`016-deep-weird-lists 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         3. 
       </Text>
@@ -1724,7 +1694,6 @@ exports[`016-deep-weird-lists 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2205,7 +2174,6 @@ exports[`016-deep-weird-lists 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         1. 
       </Text>
@@ -2251,7 +2219,6 @@ exports[`016-deep-weird-lists 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
             >
               1. 
             </Text>
@@ -2510,7 +2477,6 @@ exports[`017-all-default-block-styles 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2532,7 +2498,6 @@ exports[`017-all-default-block-styles 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2554,7 +2519,6 @@ exports[`017-all-default-block-styles 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2580,7 +2544,6 @@ exports[`018-marks-all-the-way-down 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -2646,7 +2609,6 @@ exports[`019-keyless 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2675,7 +2637,6 @@ exports[`019-keyless 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2738,7 +2699,6 @@ exports[`021-list-without-level 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -2785,7 +2745,6 @@ exports[`021-list-without-level 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3193,7 +3152,6 @@ exports[`021-list-without-level 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3253,7 +3211,6 @@ exports[`021-list-without-level 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3313,7 +3270,6 @@ exports[`021-list-without-level 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3373,7 +3329,6 @@ exports[`021-list-without-level 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3418,7 +3373,6 @@ exports[`022-inline-nodes 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3462,7 +3416,6 @@ exports[`022-inline-nodes 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3488,7 +3441,6 @@ exports[`023-hard-breaks 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -3559,7 +3511,6 @@ exports[`024-inline-images 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3617,7 +3568,6 @@ exports[`024-inline-images 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3689,7 +3639,6 @@ exports[`024-inline-images 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3752,7 +3701,6 @@ exports[`025-image-with-hotspot 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3833,7 +3781,6 @@ exports[`052-custom-marks 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -3869,7 +3816,6 @@ exports[`053-override-default-marks 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -3934,7 +3880,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -3970,7 +3915,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         1. 
       </Text>
@@ -4003,7 +3947,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         2. 
       </Text>
@@ -4036,7 +3979,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         3. 
       </Text>
@@ -4069,7 +4011,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         4. 
       </Text>
@@ -4102,7 +4043,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         5. 
       </Text>
@@ -4135,7 +4075,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         6. 
       </Text>
@@ -4168,7 +4107,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         7. 
       </Text>
@@ -4201,7 +4139,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         8. 
       </Text>
@@ -4234,7 +4171,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         9. 
       </Text>
@@ -4267,7 +4203,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         10. 
       </Text>
@@ -4327,7 +4262,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -4349,7 +4283,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -4371,7 +4304,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -4420,7 +4352,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6217,7 +6148,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6239,7 +6169,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6306,7 +6235,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6328,7 +6256,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6377,7 +6304,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6413,7 +6339,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         1. 
       </Text>
@@ -6446,7 +6371,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         2. 
       </Text>
@@ -6479,7 +6403,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         3. 
       </Text>
@@ -6512,7 +6435,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         4. 
       </Text>
@@ -6545,7 +6467,6 @@ exports[`060-list-issue 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         5. 
       </Text>
@@ -6578,7 +6499,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -6627,7 +6547,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -7145,7 +7064,6 @@ exports[`060-list-issue 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       <Text
         accessible={true}
@@ -7171,7 +7089,6 @@ exports[`061-missing-mark-serializer 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={undefined}
   >
     <Text
       accessible={true}
