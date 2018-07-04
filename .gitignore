@@ -16,7 +16,7 @@ node_modules
 
 # Lockfiles
 yarn.lock
-package-lock.json
 
 # UMD bundle
 umd
+
