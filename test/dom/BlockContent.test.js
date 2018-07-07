@@ -25,6 +25,53 @@ test('renders uses empty array instead of undefined/null blocks prop', () => {
   expect(render({blocks: null})).toMatchSnapshot()
 })
 
+test('can reuse default serializers', () => {
+  const input = [
+    {
+      _key: 'meh',
+      _type: 'block',
+      markDefs: [],
+      style: 'normal',
+      children: [
+        {
+          _key: 'zing',
+          _type: 'span',
+          marks: ['em'],
+          text: 'Plain text.'
+        }
+      ]
+    },
+    {
+      _key: 'blah',
+      _type: 'block',
+      markDefs: [],
+      style: 'blockquote',
+      children: [
+        {
+          _key: 'moop',
+          _type: 'span',
+          marks: [],
+          text: 'Some quote'
+        }
+      ]
+    }
+  ]
+
+  const block = props => {
+    if (props.node.style !== 'blockquote') {
+      return BlockContent.defaultSerializers.types.block(props)
+    }
+
+    return React.createElement(
+      'blockquote',
+      {className: 'my-quote'},
+      props.node.children.map(child => child.text)
+    )
+  }
+
+  expect(render({blocks: input, serializers: {types: {block}}})).toMatchSnapshot()
+})
+
 test('should reuse serializers', () => {
   const block = {
     _key: '58cf8aa1fc74',
