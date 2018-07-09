@@ -2,6 +2,12 @@
 
 All notable changes will be documented in this file.
 
+## 2.0.1 - 2018-07-09
+
+### Added
+
+- Add `renderContainerOnSingleChild` to force container to be rendered even on single-child results
+
 ## 2.0.0 - 2018-07-04
 
 ### BREAKING

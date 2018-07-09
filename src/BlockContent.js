@@ -28,6 +28,7 @@ SanityBlockContent.getImageUrl = getImageUrl
 
 SanityBlockContent.propTypes = {
   className: PropTypes.string,
+  renderContainerOnSingleChild: PropTypes.bool,
 
   // When rendering images, we need project id and dataset, unless images are materialized
   projectId: PropTypes.string,
@@ -61,6 +62,7 @@ SanityBlockContent.propTypes = {
 }
 
 SanityBlockContent.defaultProps = {
+  renderContainerOnSingleChild: false,
   serializers: {},
   imageOptions: {}
 }
