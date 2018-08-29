@@ -7,3 +7,5 @@ src
 .eslintrc
 .gitignore
 rollup.config.js
+yarn.lock
+
