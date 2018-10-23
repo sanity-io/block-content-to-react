@@ -37,11 +37,15 @@ function CodeSerializer(props) {
   )
 }
 
+function ButtonSerializer(props) {
+  return h(Text, {style: {borderColor: '#000'}}, props.node.text)
+}
+
 const commonProps = {
   projectId: '3do82whm',
   dataset: 'production',
   serializers: {
-    types: {code: CodeSerializer},
+    types: {code: CodeSerializer, button: ButtonSerializer},
     marks: {highlight: Highlight}
   }
 }

@@ -3729,6 +3729,49 @@ exports[`025-image-with-hotspot 1`] = `
 </View>
 `;
 
+exports[`026-inline-block-with-text 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Men, 
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "borderColor": "#000",
+        }
+      }
+    >
+      bli med du også
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      , da!
+    </Text>
+  </Text>
+</View>
+`;
+
 exports[`027-styled-list-items 1`] = `
 <View>
   <View
