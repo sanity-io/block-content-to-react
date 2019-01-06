@@ -12,7 +12,9 @@
     "postpublish": "npm run clean",
     "posttest": "eslint .",
     "prepublishOnly": "npm run build",
-    "test": "NODE_ENV=test jest test/dom-* && NODE_ENV=test jest --preset react-native test/rn-*"
+    "test-dom": "NODE_ENV=test jest test/dom-*",
+    "test-rn": "NODE_ENV=test jest --preset react-native test/rn-*",
+    "test": "npm run test-dom && npm run test-rn"
   },
   "keywords": [],
   "author": "Sanity <hello@sanity.io>",
