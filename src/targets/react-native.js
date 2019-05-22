@@ -1,6 +1,6 @@
 const React = require('react')
 const {View, Linking, Dimensions, Image, Text} = require('react-native')
-const internals = require('@sanity/block-content-to-hyperscript/internals')
+const internals = require('@sanity/hyperscript-portabletext/internals')
 const {styles, textStyles} = require('./react-native-styles')
 
 const {getImageUrl, getSerializers, mergeSerializers} = internals

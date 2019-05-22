@@ -1,14 +1,14 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-const internals = require('@sanity/block-content-to-hyperscript/internals')
+const internals = require('@sanity/hyperscript-portabletext/internals')
 const {serializers, serializeSpan, renderProps} = require('./targets/dom')
 
 const {getImageUrl, blocksToNodes, mergeSerializers} = internals
 const renderNode = React.createElement
 
-const SanityBlockContent = props => {
+const SanityPortableText = props => {
   const customSerializers = mergeSerializers(
-    SanityBlockContent.defaultSerializers,
+    SanityPortableText.defaultSerializers,
     props.serializers
   )
 
@@ -21,12 +21,12 @@ const SanityBlockContent = props => {
 }
 
 // Expose default serializers to the user
-SanityBlockContent.defaultSerializers = serializers
+SanityPortableText.defaultSerializers = serializers
 
 // Expose logic for building image URLs from an image reference/node
-SanityBlockContent.getImageUrl = getImageUrl
+SanityPortableText.getImageUrl = getImageUrl
 
-SanityBlockContent.propTypes = {
+SanityPortableText.propTypes = {
   className: PropTypes.string,
   renderContainerOnSingleChild: PropTypes.bool,
 
@@ -61,10 +61,10 @@ SanityBlockContent.propTypes = {
   ]).isRequired
 }
 
-SanityBlockContent.defaultProps = {
+SanityPortableText.defaultProps = {
   renderContainerOnSingleChild: false,
   serializers: {},
   imageOptions: {}
 }
 
-module.exports = SanityBlockContent
+module.exports = SanityPortableText
