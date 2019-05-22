@@ -2,12 +2,12 @@
 const React = require('react')
 const ReactDOM = require('react-dom/server')
 const runTests = require('@sanity/block-content-tests')
-const BlockContent = require('../../src/BlockContent')
+const PortableText = require('../../src/PortableText')
 const reactTestRenderer = require('react-test-renderer')
 
 const h = React.createElement
-const getImageUrl = BlockContent.getImageUrl
-const render = props => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
+const getImageUrl = PortableText.getImageUrl
+const render = props => ReactDOM.renderToStaticMarkup(h(PortableText, props))
 const normalize = html =>
   html.replace(/ style="(.*?)"/g, (match, styleProps) => {
     const style = styleProps.replace(/;$/g, '')
@@ -59,7 +59,7 @@ test('can reuse default serializers', () => {
 
   const block = props => {
     if (props.node.style !== 'blockquote') {
-      return BlockContent.defaultSerializers.types.block(props)
+      return PortableText.defaultSerializers.types.block(props)
     }
 
     return React.createElement(
@@ -100,7 +100,7 @@ test('should reuse serializers', () => {
     }
 
     render() {
-      return React.createElement(BlockContent, {
+      return React.createElement(PortableText, {
         serializers: this.serializers,
         blocks: [block],
         msg: this.props.msg
