@@ -2,6 +2,10 @@
 
 All notable changes will be documented in this file.
 
+## 3.0.0 - 2018-05-22
+
+Rename to react-portabletext
+
 ## 2.0.1 - 2018-07-09
 
 ### Added

@@ -1,7 +1,7 @@
 {
-  "name": "@sanity/block-content-to-react",
-  "description": "React component for transforming Sanity block content to React components",
-  "version": "2.0.6",
+  "name": "@sanity/react-portabletext",
+  "description": "React component for transforming Portable Text to React components",
+  "version": "3.0.0",
   "main": "lib/BlockContent.js",
   "scripts": {
     "build": "npm run clean && npm run compile",
@@ -51,12 +51,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanity-io/block-content-to-react.git"
+    "url": "git+https://github.com/sanity-io/react-portabletext.git"
   },
   "bugs": {
-    "url": "https://github.com/sanity-io/block-content-to-react/issues"
+    "url": "https://github.com/sanity-io/react-portabletext/issues"
   },
-  "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
+  "homepage": "https://github.com/sanity-io/react-portabletext#readme",
   "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [

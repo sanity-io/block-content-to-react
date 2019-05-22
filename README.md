@@ -1,11 +1,11 @@
-# block-content-to-react
+# react-portabletext
 
-Render an array of [block text](https://www.sanity.io/docs/schema-types/block-type) from Sanity with React or React Native.
+Render [Portable Text](https://www.sanity.io/docs/content-studio/what-you-need-to-know-about-block-text) from Sanity with React or React Native.
 
 ## Installing
 
 ```
-npm install --save @sanity/block-content-to-react
+npm install --save @sanity/react-portabletext
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install --save @sanity/block-content-to-react
 ```js
 const React = require('react')
 const ReactDOM = require('react-dom')
-const BlockContent = require('@sanity/block-content-to-react')
+const BlockContent = require('@sanity/react-portabletext')
 const client = require('@sanity/client')({
   projectId: '<your project id>',
   dataset: '<some dataset>',
