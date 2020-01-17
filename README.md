@@ -101,20 +101,26 @@ const highlight = props => {
 />
 ```
 
-### Customizing default serializer for `block`-type
+### Customizing the default serializer for `block`-type
+
+This code snippet first checks for a heading style (h1, h2, h3, and so on), and returns a React-element with a custom classname that includes the heading level. It has also defined a how blocks with a `blockquote` style should be rendered, adding a hyphen in front of it's children. If the block doesn't have any customBlocks defined, it will fall back on the default serializers (`BlockContent.defaultSerializers.types.block(props)`).
 
 ```js
 const BlockRenderer = props => {
-  const style = props.node.style || 'normal'
-
+  const { style = "normal" } = props.node;
+  
   if (/^h\d/.test(style)) {
     const level = style.replace(/[^\d]/g, '')
-    return <h2 className={`my-heading level-${level}`}>{props.children}</h2>
+    return React.createElement(style, { className: `heading-${level}`}, props.children)
   }
 
-  return style === 'blockquote'
-    ? <blockquote className="my-block-quote">{props.children}</blockquote>
-    : <p className="my-paragraph">{props.children}</p>
+  const customBlocks = {
+    blockquote: <blockquote>– {props.children}</blockquote>
+  };
+
+  return (
+    customBlocks[style] || BlockContent.defaultSerializers.types.block(props)
+  );
 }
 
 <BlockContent
