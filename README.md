@@ -107,20 +107,19 @@ This code snippet first checks for a heading style (h1, h2, h3, and so on), and 
 
 ```js
 const BlockRenderer = props => {
-  const { style = "normal" } = props.node;
+  const {style = 'normal'} = props.node;
   
   if (/^h\d/.test(style)) {
     const level = style.replace(/[^\d]/g, '')
     return React.createElement(style, { className: `heading-${level}`}, props.children)
   }
-
-  const customBlocks = {
-    blockquote: <blockquote>– {props.children}</blockquote>
-  };
-
-  return (
-    customBlocks[style] || BlockContent.defaultSerializers.types.block(props)
-  );
+  
+  if (style === 'blockquote') {
+    return <blockquote>- {props.children}</blockquote>
+  }
+  
+  // Fall back to default handling
+  return BlockContent.defaultSerializers.types.block(props)
 }
 
 <BlockContent
