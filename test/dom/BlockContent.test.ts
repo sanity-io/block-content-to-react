@@ -84,6 +84,7 @@ test('should reuse serializers', () => {
       super(props)
       this.serializers = {
         types: {
+          //@ts-ignore
           sometype: class SometypeComponent extends React.Component {
             // eslint-disable-next-line class-methods-use-this
             componentDidMount() {

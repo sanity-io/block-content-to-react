@@ -55,6 +55,7 @@ BlockContent.defaultSerializers = serializers
 fixtures.forEach((fixture) => {
   test(fixture.name, () => {
     const tree = renderer
+      //@ts-ignore
       .create(h(BlockContent, Object.assign({blocks: fixture.input}, commonProps)))
       .toJSON()
 
