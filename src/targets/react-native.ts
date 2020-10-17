@@ -125,9 +125,9 @@ const ListItemSerializer = (props) => {
 
 const HardBreakSerializer = () => h(Text, null, '\n')
 
-const {defaultSerializers, serializeSpan} = getSerializers(h)
+const {defaultSerializers: _defaultSerializers, serializeSpan} = getSerializers(h)
 export {serializeSpan}
-export const serializers = mergeSerializers(defaultSerializers, {
+export const defaultSerializers = mergeSerializers(_defaultSerializers, {
   // Common overrides
   types: {
     block: BlockTypeSerializer,

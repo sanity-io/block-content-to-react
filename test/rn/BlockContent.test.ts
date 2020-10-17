@@ -5,7 +5,7 @@ import * as React from 'react'
 import {Text} from 'react-native'
 import renderer from 'react-test-renderer'
 import BlockContent from 'BlockContent'
-import {serializers} from 'targets/react-native'
+import {defaultSerializers} from 'targets/react-native'
 
 const testFolder = path.dirname(require.resolve('@sanity/block-content-tests'))
 const fixturesDir = path.join(testFolder, 'fixtures')
@@ -50,7 +50,7 @@ const commonProps = {
   },
 }
 
-BlockContent.defaultSerializers = serializers
+BlockContent.defaultSerializers = defaultSerializers
 
 fixtures.forEach((fixture) => {
   test(fixture.name, () => {
