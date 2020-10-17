@@ -12,7 +12,7 @@
     // match output dir to input dir. e.g. dist/index instead of dist/src/index
     "rootDir": "./src",
     // base directory to resolve non-absolute module names.
-    "baseUrl": "./src",
+    "baseUrl": ".",
     // stricter type-checking for stronger correctness. Recommended by TS
     "strict": true,
     // linter checks for common issues
@@ -31,6 +31,9 @@
     "forceConsistentCasingInFileNames": true,
     // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
     "noEmit": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "paths": {
+      "*": ["./src/*", "node_modules/*", "node_modules/@sanity/block-content-to-hyperscript/src/*"]
+    },
   }
 }

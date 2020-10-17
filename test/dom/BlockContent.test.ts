@@ -2,9 +2,8 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom/server'
 import runTests from '@sanity/block-content-tests'
-import BlockContent, {getImageUrl, defaultSerializers, Serializers} from 'BlockContent'
 import reactTestRenderer from 'react-test-renderer'
-
+import BlockContent, {getImageUrl, defaultSerializers, Serializers} from 'index'
 const h = React.createElement
 const render = (props) => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
 const normalize = (html) =>
