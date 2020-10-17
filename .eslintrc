@@ -1,8 +1,10 @@
 {
   "env": {
     "node": true,
+    "es6": true,
     "browser": true
   },
+  "parser": "@typescript-eslint/parser",
   "extends": ["sanity", "prettier"],
   "rules": {
     "id-length": ["warn", {"exceptions": ["i", "j", "x", "y", "z", "h"], "min": 2}]

@@ -12,7 +12,6 @@
     "postpublish": "npm run clean",
     "posttest": "eslint .",
     "prepublishOnly": "npm run build",
-    "test-dom": "NODE_ENV=test jest test/dom-*",
     "test-rn": "NODE_ENV=test jest --preset react-native test/rn-*",
     "test": "npm run test-dom && npm run test-rn"
   },
@@ -30,17 +29,24 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react-native": "^4.0.0",
     "envify": "^4.1.0",
-    "eslint": "^5.12.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-config-sanity": "^4.0.2",
     "eslint-plugin-import": "^2.13.0",
     "jest": "^23.4.2",
-    "prettier": "^1.15.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-native": "^0.60.5",
     "react-test-renderer": "^16.7.0",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "@types/hyperscript": "0.0.4",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-config-sanity": "^1.150.8",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
   },
   "peerDependencies": {
     "react": ">=15.0.0"
@@ -58,9 +64,6 @@
   },
   "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
   "jest": {
-    "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
+    "moduleDirectories": ["node_modules", "src"]
   }
 }
