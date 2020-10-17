@@ -4,6 +4,14 @@ import ReactDOM from 'react-dom/server'
 import runTests from '@sanity/block-content-tests'
 import reactTestRenderer from 'react-test-renderer'
 import BlockContent, {getImageUrl, defaultSerializers, Serializers} from 'index'
+
+// eslint-disable-next-line no-console
+console.warn = jest.fn() // silences the console.watn calls when running tests
+// REVIEW: could we somehow test when console.warn have been called?
+// it('console.warn have been called', () => {
+//   expect(console.warn).toBeCalledWith(/** */)
+// })
+
 const h = React.createElement
 const render = (props) => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
 const normalize = (html) =>
