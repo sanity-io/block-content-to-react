@@ -1,11 +1,11 @@
-const {StyleSheet} = require('react-native')
+import {StyleSheet} from 'react-native'
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   blockquote: {
     paddingHorizontal: 14,
     borderLeftWidth: 3.5,
     borderLeftColor: '#dfe2e5',
-    marginBottom: 16
+    marginBottom: 16,
   },
 
   h1: {marginVertical: 22},
@@ -19,50 +19,50 @@ const styles = StyleSheet.create({
 
   listItem: {
     flex: 1,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
 
   bulletlistIcon: {
     marginLeft: 10,
     marginRight: 10,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 
   listItemWrapper: {
     flexDirection: 'row',
-    justifyContent: 'flex-start'
-  }
+    justifyContent: 'flex-start',
+  },
 })
 
-const textStyles = StyleSheet.create({
+export const textStyles = StyleSheet.create({
   h1: {
     fontWeight: 'bold',
-    fontSize: 32
+    fontSize: 32,
   },
 
   h2: {
     fontWeight: 'bold',
-    fontSize: 24
+    fontSize: 24,
   },
 
   h3: {
     fontWeight: 'bold',
-    fontSize: 18
+    fontSize: 18,
   },
 
   h4: {
     fontWeight: 'bold',
-    fontSize: 16
+    fontSize: 16,
   },
 
   h5: {
     fontWeight: 'bold',
-    fontSize: 14
+    fontSize: 14,
   },
 
   h6: {
     fontWeight: 'bold',
-    fontSize: 10
+    fontSize: 10,
   },
 
   strong: {fontWeight: 'bold'},
@@ -75,11 +75,6 @@ const textStyles = StyleSheet.create({
     paddingVertical: 3,
     paddingHorizontal: 5,
     backgroundColor: 'rgba(27, 31, 35, 0.05)',
-    color: '#24292e'
-  }
+    color: '#24292e',
+  },
 })
-
-module.exports = {
-  textStyles,
-  styles
-}

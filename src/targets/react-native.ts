@@ -1,12 +1,21 @@
-const React = require('react')
-const {View, Linking, Dimensions, Image, Text} = require('react-native')
-const internals = require('@sanity/block-content-to-hyperscript/internals')
-const {styles, textStyles} = require('./react-native-styles')
+import * as React from 'react'
+import {View, Linking, Dimensions, Image, Text} from 'react-native'
+import {getImageUrl, getSerializers, mergeSerializers} from '@sanity/block-content-to-hyperscript'
+import {styles, textStyles} from 'targets/react-native-styles'
 
-const {getImageUrl, getSerializers, mergeSerializers} = internals
 const h = React.createElement
 
-class DynamicImage extends React.PureComponent {
+export interface ConstrainDimensions {
+  width: number
+  height: number
+  maxWidth?: string
+}
+
+export interface DynamicImageState {
+  size: null | ConstrainDimensions
+}
+
+class DynamicImage extends React.PureComponent<any, DynamicImageState> {
   constructor(props) {
     super(props)
 
@@ -21,7 +30,7 @@ class DynamicImage extends React.PureComponent {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  constrainDimensions(img) {
+  constrainDimensions(img): ConstrainDimensions {
     const windowDimensions = Dimensions.get('window')
     const maxWidth = windowDimensions.width
     const maxHeight = windowDimensions.height
@@ -29,7 +38,7 @@ class DynamicImage extends React.PureComponent {
 
     return {
       width: img.width * ratio,
-      height: img.height * ratio
+      height: img.height * ratio,
     }
   }
 
@@ -46,23 +55,23 @@ class DynamicImage extends React.PureComponent {
   }
 }
 
-const BlockTypeSerializer = props => {
+const BlockTypeSerializer = (props) => {
   const style = props.node.style || 'normal'
   // Wrap in a text element to make children display inline
   return h(View, {style: styles[style]}, h(Text, {style: textStyles[style]}, props.children))
 }
 
-const RnImageSerializer = props => {
+const RnImageSerializer = (props) => {
   const docId = props.node.asset._ref || ''
   const [imgWidth, imgHeight] = docId
     .replace(/.*?-(\d+x\d+)-[a-z]+$/, '$1')
     .split('x')
-    .map(num => parseInt(num, 10))
+    .map((num) => parseInt(num, 10))
 
   return h(DynamicImage, {
     source: {uri: getImageUrl(props)},
     imgWidth,
-    imgHeight
+    imgHeight,
   })
 }
 
@@ -70,12 +79,12 @@ const markSerializer = (style, props) => {
   return h(Text, {style: textStyles[style]}, props.children)
 }
 
-const LinkSerializer = props => {
+const LinkSerializer = (props) => {
   const onPress = () => Linking.openURL(props.mark.href)
   return h(Text, {onPress, style: textStyles.link}, props.children)
 }
 
-const ListSerializer = props => {
+const ListSerializer = (props) => {
   const marginStyles = props.level > 1 ? {marginVertical: 0} : {}
   return h(
     View,
@@ -84,7 +93,7 @@ const ListSerializer = props => {
   )
 }
 
-const ListItemSerializer = props => {
+const ListItemSerializer = (props) => {
   const type = props.node.listItem
   const children =
     !props.node.style || props.node.style === 'normal'
@@ -117,11 +126,12 @@ const ListItemSerializer = props => {
 const HardBreakSerializer = () => h(Text, null, '\n')
 
 const {defaultSerializers, serializeSpan} = getSerializers(h)
-const serializers = mergeSerializers(defaultSerializers, {
+export {serializeSpan}
+export const serializers = mergeSerializers(defaultSerializers, {
   // Common overrides
   types: {
     block: BlockTypeSerializer,
-    image: RnImageSerializer
+    image: RnImageSerializer,
   },
 
   marks: {
@@ -130,7 +140,7 @@ const serializers = mergeSerializers(defaultSerializers, {
     code: markSerializer.bind(null, 'code'),
     underline: markSerializer.bind(null, 'underline'),
     'strike-through': markSerializer.bind(null, 'strike-through'),
-    link: LinkSerializer
+    link: LinkSerializer,
   },
 
   list: ListSerializer,
@@ -139,11 +149,7 @@ const serializers = mergeSerializers(defaultSerializers, {
   container: View,
   markFallback: Text,
   text: Text,
-  empty: View
+  empty: View,
 })
 
-module.exports = {
-  serializers,
-  serializeSpan,
-  renderProps: {listNestMode: 'normal'}
-}
+export const renderProps = {listNestMode: 'normal'}

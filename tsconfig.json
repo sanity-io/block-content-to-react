@@ -4,6 +4,7 @@
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
+    "jsx": "preserve",
     // output .d.ts declaration files for consumers
     "declaration": true,
     // output .js.map sourcemap files for consumers

@@ -1,15 +1,14 @@
 /* eslint-disable id-length, max-len */
-const React = require('react')
-const ReactDOM = require('react-dom/server')
-const runTests = require('@sanity/block-content-tests')
-const BlockContent = require('../../src/BlockContent')
-const reactTestRenderer = require('react-test-renderer')
+import * as React from 'react'
+import ReactDOM from 'react-dom/server'
+import runTests from '@sanity/block-content-tests'
+import BlockContent, {getImageUrl, defaultSerializers, Serializers} from 'BlockContent'
+import reactTestRenderer from 'react-test-renderer'
 
 const h = React.createElement
-const getImageUrl = BlockContent.getImageUrl
-const render = props => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
-const normalize = html =>
-  html.replace(/ style="(.*?)"/g, (match, styleProps) => {
+const render = (props) => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
+const normalize = (html) =>
+  html.replace(/ style="(.*?)"/g, (_, styleProps) => {
     const style = styleProps.replace(/;$/g, '')
     return ` style="${style}"`
   })
@@ -37,9 +36,9 @@ test('can reuse default serializers', () => {
           _key: 'zing',
           _type: 'span',
           marks: ['em'],
-          text: 'Plain text.'
-        }
-      ]
+          text: 'Plain text.',
+        },
+      ],
     },
     {
       _key: 'blah',
@@ -51,21 +50,21 @@ test('can reuse default serializers', () => {
           _key: 'moop',
           _type: 'span',
           marks: [],
-          text: 'Some quote'
-        }
-      ]
-    }
+          text: 'Some quote',
+        },
+      ],
+    },
   ]
 
-  const block = props => {
+  const block = (props) => {
     if (props.node.style !== 'blockquote') {
-      return BlockContent.defaultSerializers.types.block(props)
+      return defaultSerializers.types.block(props)
     }
 
     return React.createElement(
       'blockquote',
       {className: 'my-quote'},
-      props.node.children.map(child => child.text)
+      props.node.children.map((child) => child.text)
     )
   }
 
@@ -76,13 +75,14 @@ test('should reuse serializers', () => {
   const block = {
     _key: '58cf8aa1fc74',
     _type: 'sometype',
-    something: {someProperty: 'someValue'}
+    something: {someProperty: 'someValue'},
   }
 
   let numMounts = 0
   class RootComponent extends React.Component {
-    constructor() {
-      super()
+    serializers: Serializers
+    constructor(props) {
+      super(props)
       this.serializers = {
         types: {
           sometype: class SometypeComponent extends React.Component {
@@ -92,10 +92,11 @@ test('should reuse serializers', () => {
             }
 
             render() {
+              //@ts-ignore
               return React.createElement('div', {}, `Hello ${this.props.msg}`)
             }
-          }
-        }
+          },
+        },
       }
     }
 
@@ -103,7 +104,8 @@ test('should reuse serializers', () => {
       return React.createElement(BlockContent, {
         serializers: this.serializers,
         blocks: [block],
-        msg: this.props.msg
+        //@ts-ignore
+        msg: this.props.msg,
       })
     }
   }
