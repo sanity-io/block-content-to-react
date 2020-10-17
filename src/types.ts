@@ -1,5 +1,4 @@
 import {Serializers} from '@sanity/block-content-to-hyperscript/dist/types'
-export {} from '@sanity/block-content-to-hyperscript'
 
 export interface Block {
   _type: string
