@@ -33,7 +33,8 @@ const PortableText = () => (
         _type: 'block',
         markDefs: [
           {
-            _key: 'highlight',
+            _key: "0",
+            _type: 'highlight',
             color: 'orange',
           },
         ],
@@ -41,7 +42,7 @@ const PortableText = () => (
           {
             _type: 'span',
             text: '',
-            marks: ['highlight'],
+            marks: ["0"],
           },
         ],
       },
