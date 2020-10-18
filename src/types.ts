@@ -6,15 +6,21 @@ export interface BlockType<T, M> {
   _type: 'block'
   markDefs: MarkDefs<M>
   style?: 'normal' | string
-  children: PortableText<T, M> | SpanType<M>[]
+  children: PortableText<T, M> | SpanType[]
   listItem?: string
   level?: number
 }
 
-export type DefaultMarks = 'strong' | 'em' | 'code' | 'underline' | 'strike-through'
-export interface SpanType<M> {
+/** These makrs have a default serializer, and they will style the text accordingly. */
+export type DefaultMark = 'strong' | 'em' | 'code' | 'underline' | 'strike-through'
+export interface SpanType {
   _type: 'span'
-  marks?: (keyof M | DefaultMarks)[]
+  /**
+   * A list of strings.
+   * If not a `DefaultMark`, you must have
+   * a corresponding mark definition in `markDefs`
+   * */
+  marks?: DefaultMark[] | string[]
   text: string
 }
 
@@ -39,20 +45,26 @@ export type TypeSerializers<S> = {
   [K in keyof S]: TypeSerializer<S, K>
 }
 
-export type MarkDef<M> = {[K in keyof M]: {_key: K} & M[K]}
+export type MarkDef<M> = {
+  [T in keyof M]: {
+    _type: T
+    /** Must correspond to one of the marks from a child of `children` */
+    _key: string
+  } & M[T]
+}
 export type MarkDefs<M> = MarkDef<M>[keyof MarkDef<M>][]
-export type MarkProps<K, P> = {
+export type MarkProps<P> = {
   _type: 'span'
   _key: undefined
   mark: P
-  markKey: K
+  markKey: string
 }
 
 /**
  * Use this if you define your custom mark serializer
  * outside of BlockContent#serializers#marks.
  */
-export type MarkSerializer<S, K extends keyof S> = React.FC<MarkProps<K, S[K]>>
+export type MarkSerializer<S, K extends keyof S> = React.FC<MarkProps<S[K]>>
 
 /**
  * Use this if you define all your custom mark serializers
@@ -62,12 +74,16 @@ export type MarkSerializers<S> = {
   [K in keyof S]: MarkSerializer<S, K>
 }
 
+/**
+ * Either a [PortableText](https://github.com/portabletext/portabletext)
+ * object or an array.
+ */
 export type PortableText<T = undefined, M = undefined> = (SerializerTypes<T> | BlockType<T, M>)[]
 
 export type Serializers<T = undefined, M = undefined> = Omit<
   {
     /**
-     * Serializers for block types
+     * Serializers for custom block types
      * @example
      * ```jsx
      * const input = [{
@@ -135,16 +151,16 @@ export type Serializers<T = undefined, M = undefined> = Omit<
      */
     marks: MarkSerializers<M>
     /** React component to use when rendering a list node */
-    list?: React.Component
+    list?: React.FC
     /** React component to use when rendering a list item node */
-    listItem?: React.Component
+    listItem?: React.FC
     /**
      * React component to use when transforming newline characters
      * to a hard break (<br/> by default, pass false to render newline character)
      */
-    hardBreak?: React.Component
+    hardBreak?: React.FC
     /** Serializer for the container wrapping the blocks */
-    container?: React.Component
+    container?: React.FC
   },
   T extends undefined ? 'types' : never | M extends undefined ? 'marks' : never
 >
@@ -166,7 +182,7 @@ export interface BlockContentProps<T = undefined, M = undefined> {
    * If you always want to render the container, pass `true`.
    */
   renderContainerOnSingleChild?: boolean
-  /**  Define custom serializers */
+  /** Define serializers for custom block types and marks here  */
   serializers?: Serializers<T, M>
   /**
    * When encountering image blocks,
@@ -191,6 +207,10 @@ export interface BlockContentProps<T = undefined, M = undefined> {
   dataset?: string
 }
 
+/**
+ * Renders [PortableText](https://github.com/portabletext/portabletext)
+ * with React components
+ */
 export interface BlockContent {
   <T = undefined, M = undefined>(props: BlockContentProps<T, M>): JSX.Element
   defaultSerializers: Serializers
