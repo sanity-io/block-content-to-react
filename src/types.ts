@@ -18,11 +18,25 @@ export interface SpanType<M> {
   text: string
 }
 
-export type TypeProps<K, P> = {
+type TypeProps<K, P> = {
   node: P
   _type: K
   options: {imageOptions: any}
   isInline: boolean
+}
+
+/**
+ * Use this if you define your custom type serializer
+ * outside of BlockContent#serializers#types.
+ */
+export type TypeSerializer<S, K extends keyof S> = React.FC<TypeProps<K, S[K]>>
+
+/**
+ * Use this if you define all your custom type serializers
+ * outside of BlockContent#serializers.
+ */
+export type TypeSerializers<S> = {
+  [K in keyof S]: TypeSerializer<S, K>
 }
 
 export type MarkDef<M> = {[K in keyof M]: {_key: K} & M[K]}
@@ -32,6 +46,20 @@ export type MarkProps<K, P> = {
   _key: undefined
   mark: P
   markKey: K
+}
+
+/**
+ * Use this if you define your custom mark serializer
+ * outside of BlockContent#serializers#marks.
+ */
+export type MarkSerializer<S, K extends keyof S> = React.FC<MarkProps<K, S[K]>>
+
+/**
+ * Use this if you define all your custom mark serializers
+ * outside of BlockContent#serializers.
+ */
+export type MarkSerializers<S> = {
+  [K in keyof S]: MarkSerializer<S, K>
 }
 
 export type PortableText<T = undefined, M = undefined> = (
@@ -75,7 +103,7 @@ export type Serializers<T = undefined, M = undefined> = Omit<
      * />
      * ```
      */
-    types: T extends undefined ? never : {[K in keyof T]: React.FC<TypeProps<K, T[K]>>}
+    types: TypeSerializers<T>
     /**
      * Serializers for marks - data that annotates a text child of a block.
      * @example
@@ -109,7 +137,7 @@ export type Serializers<T = undefined, M = undefined> = Omit<
      * />
      * ```
      */
-    marks: {[K in keyof M]: React.FC<MarkProps<K, M[K]>>}
+    marks: MarkSerializers<M>
     /** React component to use when rendering a list node */
     list?: React.Component
     /** React component to use when rendering a list item node */
