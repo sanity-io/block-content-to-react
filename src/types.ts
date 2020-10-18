@@ -1,17 +1,7 @@
 import BlockContent from 'index'
 
-export type DefaultMarks = 'strong' | 'em' | 'code' | 'underline' | 'strike-through'
-
 export type SerializerType<T> = {[K in keyof T]: {_type: K} & T[K]}
 export type SerializerTypes<T> = SerializerType<T>[keyof SerializerType<T>]
-
-export type MarkDef<M> = {[K in keyof M]: {_key: K} & M[K]}
-export type MarkDefs<M> = MarkDef<M>[keyof MarkDef<M>][]
-export interface SpanType<M> {
-  _type: 'span'
-  marks?: (keyof M | DefaultMarks)[]
-  text: string
-}
 export interface BlockType<T, M> {
   _type: 'block'
   markDefs: MarkDefs<M>
@@ -21,17 +11,11 @@ export interface BlockType<T, M> {
   level?: number
 }
 
-export type PortableText<T = undefined, M = undefined> = (
-  | SerializerTypes<T>
-  | BlockType<T, M>
-  | SpanType<M>
-)[]
-
-export type MarkProps<K, P> = {
+export type DefaultMarks = 'strong' | 'em' | 'code' | 'underline' | 'strike-through'
+export interface SpanType<M> {
   _type: 'span'
-  _key: undefined
-  mark: P
-  markKey: K
+  marks?: (keyof M | DefaultMarks)[]
+  text: string
 }
 
 export type TypeProps<K, P> = {
@@ -41,87 +25,105 @@ export type TypeProps<K, P> = {
   isInline: boolean
 }
 
-export type Serializers<T = undefined, M = undefined> = {
-  /**
-   * Serializers for block types
-   * @example
-   * ```jsx
-   * const input = [{
-   *   _type: 'block',
-   *   children: [{
-   *     _key: 'a1ph4',
-   *     _type: 'span',
-   *     marks: ['s0m3k3y'],
-   *     text: 'Sanity'
-   *   }],
-   *   markDefs: [{
-   *     _key: 's0m3k3y',
-   *     _type: 'highlight',
-   *     color: '#E4FC5B'
-   *   }]
-   * }]
-   *
-   * const highlight = props => {
-   *   return (
-   *     <span style={{backgroundColor: props.mark.color}}>
-   *       {props.children}
-   *     </span>
-   *   )
-   * }
-   *
-   * <BlockContent
-   *   blocks={input}
-   *   serializers={{marks: {highlight}}}
-   * />
-   * ```
-   */
-  types?: T extends undefined ? never : {[K in keyof T]: React.FC<TypeProps<K, T[K]>>}
-  /**
-   * Serializers for marks - data that annotates a text child of a block.
-   * @example
-   * ```jsx
-   * const input = [{
-   *   _type: 'block',
-   *   children: [{
-   *     _key: 'a1ph4',
-   *     _type: 'span',
-   *     marks: ['s0m3k3y'],
-   *     text: 'Sanity'
-   *   }],
-   *   markDefs: [{
-   *     _key: 's0m3k3y',
-   *     _type: 'highlight',
-   *     color: '#E4FC5B'
-   *   }]
-   * }]
-   *
-   * const highlight = props => {
-   *   return (
-   *     <span style={{backgroundColor: props.mark.color}}>
-   *       {props.children}
-   *     </span>
-   *   )
-   * }
-   *
-   * <BlockContent
-   *   blocks={input}
-   *   serializers={{marks: {highlight}}}
-   * />
-   * ```
-   */
-  marks?: M extends undefined ? never : {[K in keyof M]: React.FC<MarkProps<K, M[K]>>}
-  /** React component to use when rendering a list node */
-  list?: React.Component
-  /** React component to use when rendering a list item node */
-  listItem?: React.Component
-  /**
-   * React component to use when transforming newline characters
-   * to a hard break (<br/> by default, pass false to render newline character)
-   */
-  hardBreak?: React.Component
-  /** Serializer for the container wrapping the blocks */
-  container?: React.Component
+export type MarkDef<M> = {[K in keyof M]: {_key: K} & M[K]}
+export type MarkDefs<M> = MarkDef<M>[keyof MarkDef<M>][]
+export type MarkProps<K, P> = {
+  _type: 'span'
+  _key: undefined
+  mark: P
+  markKey: K
 }
+
+export type PortableText<T = undefined, M = undefined> = (
+  | SerializerTypes<T>
+  | BlockType<T, M>
+  | SpanType<M>
+)[]
+
+export type Serializers<T = undefined, M = undefined> = Omit<
+  {
+    /**
+     * Serializers for block types
+     * @example
+     * ```jsx
+     * const input = [{
+     *   _type: 'block',
+     *   children: [{
+     *     _key: 'a1ph4',
+     *     _type: 'span',
+     *     marks: ['s0m3k3y'],
+     *     text: 'Sanity'
+     *   }],
+     *   markDefs: [{
+     *     _key: 's0m3k3y',
+     *     _type: 'highlight',
+     *     color: '#E4FC5B'
+     *   }]
+     * }]
+     *
+     * const highlight = props => {
+     *   return (
+     *     <span style={{backgroundColor: props.mark.color}}>
+     *       {props.children}
+     *     </span>
+     *   )
+     * }
+     *
+     * <BlockContent
+     *   blocks={input}
+     *   serializers={{marks: {highlight}}}
+     * />
+     * ```
+     */
+    types: T extends undefined ? never : {[K in keyof T]: React.FC<TypeProps<K, T[K]>>}
+    /**
+     * Serializers for marks - data that annotates a text child of a block.
+     * @example
+     * ```jsx
+     * const input = [{
+     *   _type: 'block',
+     *   children: [{
+     *     _key: 'a1ph4',
+     *     _type: 'span',
+     *     marks: ['s0m3k3y'],
+     *     text: 'Sanity'
+     *   }],
+     *   markDefs: [{
+     *     _key: 's0m3k3y',
+     *     _type: 'highlight',
+     *     color: '#E4FC5B'
+     *   }]
+     * }]
+     *
+     * const highlight = props => {
+     *   return (
+     *     <span style={{backgroundColor: props.mark.color}}>
+     *       {props.children}
+     *     </span>
+     *   )
+     * }
+     *
+     * <BlockContent
+     *   blocks={input}
+     *   serializers={{marks: {highlight}}}
+     * />
+     * ```
+     */
+    marks: {[K in keyof M]: React.FC<MarkProps<K, M[K]>>}
+    /** React component to use when rendering a list node */
+    list?: React.Component
+    /** React component to use when rendering a list item node */
+    listItem?: React.Component
+    /**
+     * React component to use when transforming newline characters
+     * to a hard break (<br/> by default, pass false to render newline character)
+     */
+    hardBreak?: React.Component
+    /** Serializer for the container wrapping the blocks */
+    container?: React.Component
+  },
+  T extends undefined ? 'types' : never | M extends undefined ? 'marks' : never
+>
 
 export interface BlockContentProps<T = undefined, M = undefined> {
   /**
