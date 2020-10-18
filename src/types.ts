@@ -12,21 +12,20 @@ export interface SpanType<M> {
   marks?: (keyof M | DefaultMarks)[]
   text: string
 }
-export type BlockChildren<T = undefined, M = undefined> = Block<T, M>[]
-export interface DefaultBlockType<T, M> {
+export interface BlockType<T, M> {
   _type: 'block'
-  markDefs?: MarkDefs<M>
+  markDefs: MarkDefs<M>
   style?: 'normal' | string
-  children: Block<T, M>[] | BlockChildren<T, M>
+  children: PortableText<T, M>
   listItem?: string
   level?: number
 }
 
-type Block<T = undefined, M = undefined> =
+export type PortableText<T = undefined, M = undefined> = (
   | SerializerTypes<T>
-  | (DefaultBlockType<T, M> | SpanType<M>)
-
-export type Blocks<T = undefined, M = undefined> = Block<T, M> | Block<T, M>[]
+  | BlockType<T, M>
+  | SpanType<M>
+)[]
 
 export type MarkProps<K, P> = {
   _type: 'span'
@@ -130,7 +129,7 @@ export interface BlockContentProps<T = undefined, M = undefined> {
    *
    * *This is the only required prop*
    */
-  blocks: Blocks<T, M>
+  blocks: PortableText<T, M> | PortableText<T, M>[keyof PortableText<T, M>]
   /**
    * When more than one block is given, a container node has to be created. Passing a className will pass it on to the container.
    * @note see `renderContainerOnSingleChild`
