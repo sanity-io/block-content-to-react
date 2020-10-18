@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@sanity/block-content-tests": "^0.3.0",
-    "@size-limit/preset-small-lib": "^4.6.0",
     "@types/hyperscript": "0.0.4",
     "@types/react": "^16.9.53",
     "@typescript-eslint/parser": "^4.4.1",
@@ -38,8 +37,6 @@
     "eslint-config-prettier": "^6.13.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-config-sanity": "^1.150.8",
-    "eslint-plugin-import": "^2.13.0",
-    "husky": "^4.3.0",
     "prettier": "^2.1.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -66,6 +63,10 @@
   },
   "homepage": "https://github.com/sanity-io/block-content-to-react#readme",
   "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
     "moduleDirectories": [
       "node_modules",
       "src"

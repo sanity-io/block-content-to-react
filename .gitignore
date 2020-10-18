@@ -2,7 +2,7 @@
 *.log
 
 # Compiled files
-dist
+lib
 
 # Coverage directories used by tools like istanbul
 coverage
@@ -14,5 +14,9 @@ node_modules
 # Other snargh
 .DS_Store
 
-# Yarn
+# Lockfiles
 yarn.lock
+
+# UMD bundle
+umd
+

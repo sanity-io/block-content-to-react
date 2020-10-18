@@ -43,9 +43,9 @@ test('can reuse default serializers', () => {
           _key: 'zing',
           _type: 'span',
           marks: ['em'],
-          text: 'Plain text.',
-        },
-      ],
+          text: 'Plain text.'
+        }
+      ]
     },
     {
       _key: 'blah',
@@ -57,13 +57,13 @@ test('can reuse default serializers', () => {
           _key: 'moop',
           _type: 'span',
           marks: [],
-          text: 'Some quote',
-        },
-      ],
-    },
+          text: 'Some quote'
+        }
+      ]
+    }
   ]
 
-  const block = (props) => {
+  const block = props => {
     if (props.node.style !== 'blockquote') {
       return defaultSerializers.types.block(props)
     }
@@ -71,7 +71,7 @@ test('can reuse default serializers', () => {
     return React.createElement(
       'blockquote',
       {className: 'my-quote'},
-      props.node.children.map((child) => child.text)
+      props.node.children.map(child => child.text)
     )
   }
 
@@ -82,7 +82,7 @@ test('should reuse serializers', () => {
   const block = {
     _key: '58cf8aa1fc74',
     _type: 'sometype',
-    something: {someProperty: 'someValue'},
+    something: {someProperty: 'someValue'}
   }
 
   let numMounts = 0
@@ -103,8 +103,8 @@ test('should reuse serializers', () => {
               //@ts-ignore
               return React.createElement('div', {}, `Hello ${this.props.msg}`)
             }
-          },
-        },
+          }
+        }
       }
     }
 
@@ -113,7 +113,7 @@ test('should reuse serializers', () => {
         serializers: this.serializers,
         blocks: [block],
         //@ts-ignore
-        msg: this.props.msg,
+        msg: this.props.msg
       })
     }
   }
