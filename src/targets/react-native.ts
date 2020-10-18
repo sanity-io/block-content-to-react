@@ -1,12 +1,21 @@
-const React = require('react')
-const {View, Linking, Dimensions, Image, Text} = require('react-native')
-const internals = require('@sanity/block-content-to-hyperscript/internals')
-const {styles, textStyles} = require('./react-native-styles')
+import * as React from 'react'
+import {View, Linking, Dimensions, Image, Text} from 'react-native'
+import {getImageUrl, getSerializers, mergeSerializers} from '@sanity/block-content-to-hyperscript'
+import {styles, textStyles} from 'targets/react-native-styles'
 
-const {getImageUrl, getSerializers, mergeSerializers} = internals
 const h = React.createElement
 
-class DynamicImage extends React.PureComponent {
+export interface ConstrainDimensions {
+  width: number
+  height: number
+  maxWidth?: string
+}
+
+export interface DynamicImageState {
+  size: null | ConstrainDimensions
+}
+
+class DynamicImage extends React.PureComponent<any, DynamicImageState> {
   constructor(props) {
     super(props)
 
@@ -21,7 +30,7 @@ class DynamicImage extends React.PureComponent {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  constrainDimensions(img) {
+  constrainDimensions(img): ConstrainDimensions {
     const windowDimensions = Dimensions.get('window')
     const maxWidth = windowDimensions.width
     const maxHeight = windowDimensions.height
@@ -116,8 +125,9 @@ const ListItemSerializer = props => {
 
 const HardBreakSerializer = () => h(Text, null, '\n')
 
-const {defaultSerializers, serializeSpan} = getSerializers(h)
-const serializers = mergeSerializers(defaultSerializers, {
+const {defaultSerializers: _defaultSerializers, serializeSpan} = getSerializers(h)
+export {serializeSpan}
+export const defaultSerializers = mergeSerializers(_defaultSerializers, {
   // Common overrides
   types: {
     block: BlockTypeSerializer,
@@ -142,8 +152,4 @@ const serializers = mergeSerializers(defaultSerializers, {
   empty: View
 })
 
-module.exports = {
-  serializers,
-  serializeSpan,
-  renderProps: {listNestMode: 'normal'}
-}
+export const renderProps = {listNestMode: 'normal'}

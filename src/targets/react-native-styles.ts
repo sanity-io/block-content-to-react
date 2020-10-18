@@ -1,6 +1,6 @@
-const {StyleSheet} = require('react-native')
+import {StyleSheet} from 'react-native'
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   blockquote: {
     paddingHorizontal: 14,
     borderLeftWidth: 3.5,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   }
 })
 
-const textStyles = StyleSheet.create({
+export const textStyles = StyleSheet.create({
   h1: {
     fontWeight: 'bold',
     fontSize: 32
@@ -78,8 +78,3 @@ const textStyles = StyleSheet.create({
     color: '#24292e'
   }
 })
-
-module.exports = {
-  textStyles,
-  styles
-}

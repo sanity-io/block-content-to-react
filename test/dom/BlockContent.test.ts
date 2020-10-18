@@ -1,15 +1,21 @@
 /* eslint-disable id-length, max-len */
-const React = require('react')
-const ReactDOM = require('react-dom/server')
-const runTests = require('@sanity/block-content-tests')
-const BlockContent = require('../../src/BlockContent')
-const reactTestRenderer = require('react-test-renderer')
+import * as React from 'react'
+import ReactDOM from 'react-dom/server'
+import runTests from '@sanity/block-content-tests'
+import reactTestRenderer from 'react-test-renderer'
+import BlockContent, {getImageUrl, defaultSerializers, ReactSerializers} from 'index'
+
+// eslint-disable-next-line no-console
+console.warn = jest.fn() // silences the console.watn calls when running tests
+// REVIEW: could we somehow test when console.warn have been called?
+// it('console.warn have been called', () => {
+//   expect(console.warn).toBeCalledWith(/** */)
+// })
 
 const h = React.createElement
-const getImageUrl = BlockContent.getImageUrl
-const render = props => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
-const normalize = html =>
-  html.replace(/ style="(.*?)"/g, (match, styleProps) => {
+const render = (props) => ReactDOM.renderToStaticMarkup(h(BlockContent, props))
+const normalize = (html) =>
+  html.replace(/ style="(.*?)"/g, (_, styleProps) => {
     const style = styleProps.replace(/;$/g, '')
     return ` style="${style}"`
   })
@@ -59,7 +65,7 @@ test('can reuse default serializers', () => {
 
   const block = props => {
     if (props.node.style !== 'blockquote') {
-      return BlockContent.defaultSerializers.types.block(props)
+      return defaultSerializers.types.block(props)
     }
 
     return React.createElement(
@@ -81,10 +87,12 @@ test('should reuse serializers', () => {
 
   let numMounts = 0
   class RootComponent extends React.Component {
-    constructor() {
-      super()
+    serializers: ReactSerializers
+    constructor(props) {
+      super(props)
       this.serializers = {
         types: {
+          //@ts-ignore
           sometype: class SometypeComponent extends React.Component {
             // eslint-disable-next-line class-methods-use-this
             componentDidMount() {
@@ -92,6 +100,7 @@ test('should reuse serializers', () => {
             }
 
             render() {
+              //@ts-ignore
               return React.createElement('div', {}, `Hello ${this.props.msg}`)
             }
           }
@@ -103,6 +112,7 @@ test('should reuse serializers', () => {
       return React.createElement(BlockContent, {
         serializers: this.serializers,
         blocks: [block],
+        //@ts-ignore
         msg: this.props.msg
       })
     }

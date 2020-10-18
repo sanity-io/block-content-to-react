@@ -1,11 +1,11 @@
 /* eslint-disable id-length, max-len, no-sync */
-const fs = require('fs')
-const path = require('path')
-const React = require('react')
-const {Text} = require('react-native')
-const renderer = require('react-test-renderer')
-const BlockContent = require('../../src/BlockContent')
-const {serializers} = require('../../src/targets/react-native')
+import fs from 'fs'
+import path from 'path'
+import * as React from 'react'
+import {Text} from 'react-native'
+import renderer from 'react-test-renderer'
+import BlockContent from 'BlockContent'
+import {defaultSerializers as serializers} from 'targets/react-native'
 
 const testFolder = path.dirname(require.resolve('@sanity/block-content-tests'))
 const fixturesDir = path.join(testFolder, 'fixtures')
@@ -55,6 +55,7 @@ BlockContent.defaultSerializers = serializers
 fixtures.forEach(fixture => {
   test(fixture.name, () => {
     const tree = renderer
+      //@ts-ignore
       .create(h(BlockContent, Object.assign({blocks: fixture.input}, commonProps)))
       .toJSON()
 
