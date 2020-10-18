@@ -3,7 +3,7 @@ import * as React from 'react'
 import ReactDOM from 'react-dom/server'
 import runTests from '@sanity/block-content-tests'
 import reactTestRenderer from 'react-test-renderer'
-import BlockContent, {getImageUrl, defaultSerializers, Serializers} from 'index'
+import BlockContent, {getImageUrl, defaultSerializers, ReactSerializers} from 'index'
 
 // eslint-disable-next-line no-console
 console.warn = jest.fn() // silences the console.watn calls when running tests
@@ -87,7 +87,7 @@ test('should reuse serializers', () => {
 
   let numMounts = 0
   class RootComponent extends React.Component {
-    serializers: Serializers
+    serializers: ReactSerializers
     constructor(props) {
       super(props)
       this.serializers = {

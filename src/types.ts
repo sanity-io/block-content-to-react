@@ -24,7 +24,7 @@ export interface SpanType {
   text: string
 }
 
-type TypeProps<K, P> = {
+export type TypeProps<K, P> = {
   node: P
   _type: K
   options: {imageOptions: any}
@@ -80,7 +80,7 @@ export type MarkSerializers<S> = {
  */
 export type PortableText<T = undefined, M = undefined> = (SerializerTypes<T> | BlockType<T, M>)[]
 
-export type Serializers<T = undefined, M = undefined> = Omit<
+export type ReactSerializers<T = undefined, M = undefined> = Omit<
   {
     /**
      * Serializers for custom block types
@@ -183,7 +183,7 @@ export interface BlockContentProps<T = undefined, M = undefined> {
    */
   renderContainerOnSingleChild?: boolean
   /** Define serializers for custom block types and marks here  */
-  serializers?: Serializers<T, M>
+  serializers?: ReactSerializers<T, M>
   /**
    * When encountering image blocks,
    * this defines which query parameters to apply in order to control size/crop mode etc.
@@ -213,5 +213,5 @@ export interface BlockContentProps<T = undefined, M = undefined> {
  */
 export interface BlockContent {
   <T = undefined, M = undefined>(props: BlockContentProps<T, M>): JSX.Element
-  defaultSerializers: Serializers
+  defaultSerializers: ReactSerializers
 }
