@@ -6,7 +6,7 @@ export interface BlockType<T, M> {
   _type: 'block'
   markDefs: MarkDefs<M>
   style?: 'normal' | string
-  children: PortableText<T, M>
+  children: PortableText<T, M> | SpanType<M>[]
   listItem?: string
   level?: number
 }
@@ -62,11 +62,7 @@ export type MarkSerializers<S> = {
   [K in keyof S]: MarkSerializer<S, K>
 }
 
-export type PortableText<T = undefined, M = undefined> = (
-  | SerializerTypes<T>
-  | BlockType<T, M>
-  | SpanType<M>
-)[]
+export type PortableText<T = undefined, M = undefined> = (SerializerTypes<T> | BlockType<T, M>)[]
 
 export type Serializers<T = undefined, M = undefined> = Omit<
   {
