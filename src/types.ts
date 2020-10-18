@@ -16,7 +16,10 @@ export type BlockChildren<T = undefined, M = undefined> = Block<T, M>[]
 export interface DefaultBlockType<T, M> {
   _type: 'block'
   markDefs?: MarkDefs<M>
+  style?: 'normal' | string
   children: Block<T, M>[] | BlockChildren<T, M>
+  listItem?: string
+  level?: number
 }
 
 type Block<T = undefined, M = undefined> =
@@ -144,7 +147,19 @@ export interface BlockContentProps<T = undefined, M = undefined> {
    * When encountering image blocks,
    * this defines which query parameters to apply in order to control size/crop mode etc.
    */
-  imageOptions?: object
+  imageOptions?: {
+    options: {
+      query?: string
+      projectId: string
+      dataset: string
+    }
+    node: {
+      asset: {
+        url: string
+        _ref: string
+      }
+    }
+  }
   /** The ID of your Sanity project. */
   projectId?: string
   /** Name of the Sanity dataset containing the document that is being rendered. */
