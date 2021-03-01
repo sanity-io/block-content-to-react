@@ -98,7 +98,7 @@ const ListItemSerializer = props => {
       View,
       {key: props.node._key, style: styles.listItemWrapper},
       h(Text, {style: styles.bulletlistIcon}, '\u00B7'),
-      h(View, {style: styles.listItem}, children)
+      h(Text, {style: styles.listItem}, children)
     )
   }
 
@@ -106,8 +106,8 @@ const ListItemSerializer = props => {
     return h(
       View,
       {key: props.node._key, style: styles.listItemWrapper},
-      h(Text, {style: styles.numberlistIcon}, `${props.index + 1}. `),
-      h(View, {style: styles.listItem}, children)
+      h(Text, {style: styles.bulletlistIcon}, `${props.index + 1}. `),
+      h(Text, {style: styles.listItem}, children)
     )
   }
 
@@ -115,6 +115,8 @@ const ListItemSerializer = props => {
 }
 
 const HardBreakSerializer = () => h(Text, null, '\n')
+
+const ContainerSerializer = ({children}) => h(View, {style: {maxWidth: "100%"}}, children)
 
 const {defaultSerializers, serializeSpan} = getSerializers(h)
 const serializers = mergeSerializers(defaultSerializers, {
@@ -136,7 +138,7 @@ const serializers = mergeSerializers(defaultSerializers, {
   list: ListSerializer,
   listItem: ListItemSerializer,
   hardBreak: HardBreakSerializer,
-  container: View,
+  container: ContainerSerializer,
   markFallback: Text,
   text: Text,
   empty: View
