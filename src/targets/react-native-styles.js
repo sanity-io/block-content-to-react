@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
 
   listItem: {
     flex: 1,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    flexDirection: 'row',
   },
 
   bulletlistIcon: {
