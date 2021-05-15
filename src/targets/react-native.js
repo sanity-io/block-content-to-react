@@ -29,7 +29,7 @@ class DynamicImage extends React.PureComponent {
 
     return {
       width: img.width * ratio,
-      height: img.height * ratio
+      height: img.height * ratio,
     }
   }
 
@@ -46,23 +46,23 @@ class DynamicImage extends React.PureComponent {
   }
 }
 
-const BlockTypeSerializer = props => {
+const BlockTypeSerializer = (props) => {
   const style = props.node.style || 'normal'
   // Wrap in a text element to make children display inline
   return h(View, {style: styles[style]}, h(Text, {style: textStyles[style]}, props.children))
 }
 
-const RnImageSerializer = props => {
+const RnImageSerializer = (props) => {
   const docId = props.node.asset._ref || ''
   const [imgWidth, imgHeight] = docId
     .replace(/.*?-(\d+x\d+)-[a-z]+$/, '$1')
     .split('x')
-    .map(num => parseInt(num, 10))
+    .map((num) => parseInt(num, 10))
 
   return h(DynamicImage, {
     source: {uri: getImageUrl(props)},
     imgWidth,
-    imgHeight
+    imgHeight,
   })
 }
 
@@ -70,12 +70,12 @@ const markSerializer = (style, props) => {
   return h(Text, {style: textStyles[style]}, props.children)
 }
 
-const LinkSerializer = props => {
+const LinkSerializer = (props) => {
   const onPress = () => Linking.openURL(props.mark.href)
   return h(Text, {onPress, style: textStyles.link}, props.children)
 }
 
-const ListSerializer = props => {
+const ListSerializer = (props) => {
   const marginStyles = props.level > 1 ? {marginVertical: 0} : {}
   return h(
     View,
@@ -84,7 +84,7 @@ const ListSerializer = props => {
   )
 }
 
-const ListItemSerializer = props => {
+const ListItemSerializer = (props) => {
   const type = props.node.listItem
   const children =
     !props.node.style || props.node.style === 'normal'
@@ -121,7 +121,7 @@ const serializers = mergeSerializers(defaultSerializers, {
   // Common overrides
   types: {
     block: BlockTypeSerializer,
-    image: RnImageSerializer
+    image: RnImageSerializer,
   },
 
   marks: {
@@ -130,7 +130,7 @@ const serializers = mergeSerializers(defaultSerializers, {
     code: markSerializer.bind(null, 'code'),
     underline: markSerializer.bind(null, 'underline'),
     'strike-through': markSerializer.bind(null, 'strike-through'),
-    link: LinkSerializer
+    link: LinkSerializer,
   },
 
   list: ListSerializer,
@@ -139,11 +139,11 @@ const serializers = mergeSerializers(defaultSerializers, {
   container: View,
   markFallback: Text,
   text: Text,
-  empty: View
+  empty: View,
 })
 
 module.exports = {
   serializers,
   serializeSpan,
-  renderProps: {listNestMode: 'normal'}
+  renderProps: {listNestMode: 'normal'},
 }

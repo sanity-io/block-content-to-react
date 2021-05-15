@@ -6,7 +6,7 @@ const {serializers, serializeSpan, renderProps} = require('./targets/dom')
 const {getImageUrl, blocksToNodes, mergeSerializers} = internals
 const renderNode = React.createElement
 
-const SanityBlockContent = props => {
+const SanityBlockContent = (props) => {
   const customSerializers = mergeSerializers(
     SanityBlockContent.defaultSerializers,
     props.serializers
@@ -14,7 +14,7 @@ const SanityBlockContent = props => {
 
   const blockProps = Object.assign({}, renderProps, props, {
     serializers: customSerializers,
-    blocks: props.blocks || []
+    blocks: props.blocks || [],
   })
 
   return blocksToNodes(renderNode, blockProps, serializers, serializeSpan)
@@ -46,25 +46,25 @@ SanityBlockContent.propTypes = {
 
     // Low-level serializers
     block: PropTypes.func,
-    span: PropTypes.func
+    span: PropTypes.func,
   }),
 
   blocks: PropTypes.oneOfType([
     PropTypes.arrayOf(
       PropTypes.shape({
-        _type: PropTypes.string.isRequired
+        _type: PropTypes.string.isRequired,
       })
     ),
     PropTypes.shape({
-      _type: PropTypes.string.isRequired
-    })
-  ]).isRequired
+      _type: PropTypes.string.isRequired,
+    }),
+  ]).isRequired,
 }
 
 SanityBlockContent.defaultProps = {
   renderContainerOnSingleChild: false,
   serializers: {},
-  imageOptions: {}
+  imageOptions: {},
 }
 
 module.exports = SanityBlockContent

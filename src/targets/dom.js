@@ -7,5 +7,5 @@ const {defaultSerializers, serializeSpan} = getSerializers(renderNode)
 module.exports = {
   serializeSpan,
   serializers: defaultSerializers,
-  renderProps: {nestMarks: true}
+  renderProps: {nestMarks: true},
 }

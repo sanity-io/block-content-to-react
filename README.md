@@ -17,20 +17,21 @@ const BlockContent = require('@sanity/block-content-to-react')
 const client = require('@sanity/client')({
   projectId: '<your project id>',
   dataset: '<some dataset>',
-  useCdn: true
+  apiVersion: '2021-03-25',
+  useCdn: true,
 })
 
 const serializers = {
   types: {
-    code: props => (
+    code: (props) => (
       <pre data-language={props.node.language}>
         <code>{props.node.code}</code>
       </pre>
-    )
-  }
+    ),
+  },
 }
 
-client.fetch('*[_type == "article"][0]').then(article => {
+client.fetch('*[_type == "article"][0]').then((article) => {
   ReactDOM.render(
     <BlockContent blocks={article.body} serializers={serializers} />,
     document.getElementById('root')
@@ -61,33 +62,40 @@ In addition, in order to render images without materializing the asset documents
 ### Rendering custom marks
 
 ```js
-const input = [{
-  _type: 'block',
-  children: [{
-    _key: 'a1ph4',
-    _type: 'span',
-    marks: ['s0m3k3y'],
-    text: 'Sanity'
-  }],
-  markDefs: [{
-    _key: 's0m3k3y',
-    _type: 'highlight',
-    color: '#E4FC5B'
-  }]
-}]
+const input = [
+  {
+    _type: 'block',
+    children: [
+      {
+        _key: 'a1ph4',
+        _type: 'span',
+        marks: ['s0m3k3y'],
+        text: 'Sanity',
+      },
+    ],
+    markDefs: [
+      {
+        _key: 's0m3k3y',
+        _type: 'highlight',
+        color: '#E4FC5B',
+      },
+    ],
+  },
+]
 
-const highlight = props => {
-  return (
-    <span style={{backgroundColor: props.mark.color}}>
-      {props.children}
-    </span>
-  )
+const highlight = (props) => {
+  return <span style={{backgroundColor: props.mark.color}}>{props.children}</span>
 }
 
-<BlockContent
-  blocks={input}
-  serializers={{marks: {highlight}}}
-/>
+ReactDOM.render(
+  <BlockContent
+    // Array of portable text blocks
+    blocks={input}
+    // Custom serializers for marks, blocks
+    serializers={{marks: {highlight}}}
+  />,
+  document.body
+)
 ```
 
 ### Specifying image options
@@ -106,26 +114,26 @@ const highlight = props => {
 This code snippet first checks for a heading style (h1, h2, h3, and so on), and returns a React-element with a custom classname that includes the heading level. It has also defined a how blocks with a `blockquote` style should be rendered, adding a hyphen in front of it's children. If the block doesn't have any customBlocks defined, it will fall back on the default serializers (`BlockContent.defaultSerializers.types.block(props)`).
 
 ```js
-const BlockRenderer = props => {
-  const {style = 'normal'} = props.node;
-  
+const BlockRenderer = (props) => {
+  const {style = 'normal'} = props.node
+
   if (/^h\d/.test(style)) {
     const level = style.replace(/[^\d]/g, '')
-    return React.createElement(style, { className: `heading-${level}`}, props.children)
+    return React.createElement(style, {className: `heading-${level}`}, props.children)
   }
-  
+
   if (style === 'blockquote') {
     return <blockquote>- {props.children}</blockquote>
   }
-  
+
   // Fall back to default handling
   return BlockContent.defaultSerializers.types.block(props)
 }
 
-<BlockContent
-  blocks={input}
-  serializers={{types: {block: BlockRenderer}}}
-/>
+ReactDOM.render(
+  <BlockContent blocks={input} serializers={{types: {block: BlockRenderer}}} />,
+  document.body
+)
 ```
 
 ## Usage with React Native
