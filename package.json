@@ -20,7 +20,7 @@
   "author": "Sanity <hello@sanity.io>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-hyperscript": "^2.0.10",
+    "@sanity/block-content-to-hyperscript": "^3.0.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {

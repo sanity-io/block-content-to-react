@@ -137,7 +137,7 @@ const serializers = mergeSerializers(defaultSerializers, {
   listItem: ListItemSerializer,
   hardBreak: HardBreakSerializer,
   container: View,
-  markFallback: Text,
+  unknownMark: Text,
   text: Text,
   empty: View,
 })
