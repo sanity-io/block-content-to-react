@@ -50,7 +50,10 @@ client.fetch('*[_type == "article"][0]').then((article) => {
 - `serializers.listItem` - React component to use when rendering a list item node
 - `serializers.hardBreak` - React component to use when transforming newline characters to a hard break (`<br/>` by default, pass `false` to render newline character)
 - `serializers.container` - Serializer for the container wrapping the blocks
+- `serializers.unknownType` - Override the default serializer for blocks of unknown type, if `ignoreUnknownTypes` is set to `false` (the default).
+- `serializers.unknownMark` - Override the default serializer for marks of unknown type. Defaults to a span without any styling.
 - `imageOptions` - When encountering image blocks, this defines which query parameters to apply in order to control size/crop mode etc.
+- `ignoreUnknownTypes` - By default (or when setting this property explicitly to `true`) it will output a hidden `<div>` with a warning. By setting this property to `false`, the renderer will throw an error when encountering unknown block types. The behavior of the unknown type rendering can be customized by specifying a serializer with `serializers.unknownType`.
 
 In addition, in order to render images without materializing the asset documents, you should also specify:
 
