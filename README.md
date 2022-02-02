@@ -2,6 +2,8 @@
 
 Render an array of [block text](https://www.sanity.io/docs/schema-types/block-type) from Sanity with React or React Native.
 
+**⚠️ Note:** This package is deprecated. We recommend migrating to its modernized successor, [@portabletext/react](https://github.com/portabletext/react-portabletext). Refer to the [migration documentation](https://github.com/portabletext/react-portabletext/blob/main/MIGRATING.md) for how to do the switch.
+
 ## Installing
 
 ```
